@@ -1,6 +1,9 @@
 package inmobiliaria
 
-class Casa {
+class Casa extends Propiedad {
+Integer cantDormitorio
+Integer cantBanios
+String cochera
 
     static constraints = {
     }
