@@ -1,6 +1,10 @@
 package inmobiliaria
 
-class Vendedor {
+class Vendedor extends Cliente{
+
+    void realizarVenta(){
+        
+    }
 
     static constraints = {
     }

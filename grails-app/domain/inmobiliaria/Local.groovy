@@ -1,6 +1,6 @@
 package inmobiliaria
 
-class Local {
+class Local extends Propiedad{
 
     static constraints = {
     }

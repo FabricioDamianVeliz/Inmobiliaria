@@ -14,6 +14,6 @@ class Departamento extends Propiedad{
       numero(blank: false, maxSize: 6)
       cantDormitorios(blank: false)
       cantBaños(blank: false)
-      garage(blank: false, maxSize: 100)
+      garage(blank: false, maxSize: 100, inList:['Si','No'])
     }
 }
