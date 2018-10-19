@@ -6,5 +6,6 @@ Integer cantBanios
 String cochera
 
     static constraints = {
+        cochera(inList:['Si','No'])
     }
 }

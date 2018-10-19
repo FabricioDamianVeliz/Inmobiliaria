@@ -9,8 +9,7 @@ class Persona {
     String telefono
     String email
 
-    static hasMany = [propiedad: Propiedad]
-    static hasMany = [quejas: Quejas]
+    static hasMany = [propiedad: Propiedad, quejas: Quejas]
 
     static constraints = {
 

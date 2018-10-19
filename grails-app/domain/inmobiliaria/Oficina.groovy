@@ -1,6 +1,6 @@
 package inmobiliaria
 
-class Oficina {
+class Oficina extends Propiedad {
 
     static constraints = {
     }

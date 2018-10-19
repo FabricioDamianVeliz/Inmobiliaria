@@ -1,6 +1,6 @@
 package inmobiliaria
 
-class Usuario {
+class Usuario extends Persona{
 
     static constraints = {
     }
