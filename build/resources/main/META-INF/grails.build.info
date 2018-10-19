@@ -1,0 +1,6 @@
+#Fri, 19 Oct 2018 18:43:50 -0300
+
+info.app.version=0.1
+info.app.name=Inmobiliaria
+grails.env=development
+info.app.grailsVersion=3.3.8

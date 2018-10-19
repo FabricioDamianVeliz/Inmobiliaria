@@ -1,7 +1,10 @@
 package inmobiliaria
 
 class Oferta {
-    PropiedadOferta [] propiedad
+
+Collection propiedadOferta
+static hasMany = [propiedadOferta : Propiedad]
+
 
     static constraints = {
     }

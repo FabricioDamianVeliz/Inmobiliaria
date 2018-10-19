@@ -1,7 +1,9 @@
 package inmobiliaria
 
 class Venta {
-    PropiedadVenta [] propiedad
+    Collection propiedadVenta
+    static hasMany = [propiedadVenta : Propiedad]
+
 
     static constraints = {
     }
