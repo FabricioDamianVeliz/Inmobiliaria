@@ -1,6 +1,6 @@
 package inmobiliaria
 
-class Cliente {
+class Cliente extends Persona{
 
     static constraints = {
     }

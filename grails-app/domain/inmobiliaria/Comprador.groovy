@@ -1,6 +1,6 @@
 package inmobiliaria
 
-class Comprador {
+class Comprador extends Cliente{
 
     static constraints = {
     }
