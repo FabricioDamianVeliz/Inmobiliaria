@@ -6,6 +6,11 @@ Integer cantBanios
 String cochera
 
     static constraints = {
-        cochera(inList:['Si','No'])
+
+    cantDormitorio(blank:false)
+    cantBaños(blank:false)
+    cochera (blank :false, inList:['Si','No'])
+
+
     }
 }
