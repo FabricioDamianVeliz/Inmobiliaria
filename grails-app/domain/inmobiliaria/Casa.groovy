@@ -6,5 +6,8 @@ Integer cantBanios
 String cochera
 
     static constraints = {
+    cantDormitorio(blank:false)
+    cantBaños(blank:false)
+    cochera (blank :false)
     }
 }
