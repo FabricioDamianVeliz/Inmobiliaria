@@ -1,8 +1,8 @@
 package inmobiliaria
 
 class Alquiler {
-Collection propiedades
-static hasMany = [propiedades : Propiedad]
+Collection propiedadAlquiler
+static hasMany = [propiedadAlquiler : Propiedad]
 
     static constraints = {
     }
