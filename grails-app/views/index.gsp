@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="estilos/estilos.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <title>Welcome to Grails</title>
+    <title>SIGAI</title>
 </head>
 <body>
         <nav class="navbar navbar-inverse">
@@ -15,7 +15,7 @@
                     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>                        
+                        <span class="icon-bar"></span>
                     </button>
                     <a class="navbar-brand" href="#">Logo</a>
                 </div>
@@ -41,13 +41,13 @@
                         </form>
 
                         <% } else { %>
-                        
+
                         <ul class="nav navbar-nav navbar-right">
-                            <li><a href="#"><span class="glyphicon glyphicon-user"></span> <%= usuario.getNombre()%></a></li> 
+                            <li><a href="#"><span class="glyphicon glyphicon-user"></span> <%= usuario.getNombre()%></a></li>
                             <li><a href="#"><span class="glyphicon glyphicon-log-out"></span> Cerrar Sesión</a></li>
                             <li><a href="#"><span class="glyphicon glyphicon-shopping-cart"></span> Carrito</a></li>
                         </ul>
-                    <% } %> 
+                    <% } %>
                 </div>
             </div>
         </nav>
@@ -61,13 +61,10 @@
 
     <div id="content" role="main">
         <section class="row colset-2-its">
-            <h1>Welcome to Grails</h1>
+            <h1>SIGAI</h1>
 
             <p>
-                Congratulations, you have successfully started your first Grails application! At the moment
-                this is the default page, feel free to modify it to either redirect to a controller or display
-                whatever content you may choose. Below is a list of controllers that are currently deployed in
-                this application, click on each to execute its default action:
+                SISTEMA INFORMÁTICO de GESTIÓN y ADMINISTRACIÓN INMOBILIARIA
             </p>
 
             <div id="controllers" role="navigation">
