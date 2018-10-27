@@ -31,3 +31,8 @@
 
 # "temporary" build files
 /target
+.gradle/3.5/fileContent/fileContent.lock
+.gradle/3.5/taskHistory/fileHashes.bin
+.gradle/3.5/taskHistory/fileSnapshots.bin
+.gradle/3.5/taskHistory/taskHistory.bin
+.gradle/3.5/taskHistory/taskHistory.lock
