@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>SIGAI</title>
-    <link rel="stylesheet" href="grails-app\assets\stylesheets\ESTILOS.css">
+    <g:if env="development"><asset:stylesheet src="ESTILOS.css"/></g:if>
     <link href="https://file.myfontastic.com/c2AiGMCLdw9ctSL4Y8aLjj/icons.css" rel="stylesheet">
 
 </head>
@@ -17,17 +17,19 @@
 
             <nav class="nav" id="nav"></nav>
                 <ul class="menu">
-                    <li class="menu__item"><a class="menu__link" href="">PROPIEDADES</a></li>
-                    <li class="menu__item"><a class="menu__link" href="">VENTAS</a></li>
-                    <li class="menu__item"><a class="menu__link" href="">ALQUILER</a></li>
-                    <li class="menu__item"><a class="menu__link" href="">QUEJAS</a></li>
-                    <li class="menu__item"><a class="menu__link" href="">USUARIOS</a></li>
+                    <li class="menu__item"><g:link controller="administracion" action="propiedades">PROPIEDADES</g:link></li>
+                    <li class="menu__item"><g:link controller="administracion" action="propiedades">VENTAS</g:link></li>
+                    <li class="menu__item"><g:link controller="administracion" action="propiedades">ALQUILER</g:link></li>
+                    <li class="menu__item"><g:link controller="administracion" action="propiedades">QUEJAS</g:link></li>
+                    <li class="menu__item"><g:link controller="administracion" action="propiedades">USUARIOS</g:link></li>
+
                 </ul>
+              
         </div>
     </header>
 
     <div class="banner">
-        <img src="grails-app\assets\images\PRINCIPAL.jpg" alt="" class="banner__img">
+        <img src="1.jpg" alt="" class="banner__img">
         <div class="contenedor">
             <h2 class="b1">Lo mejor a tu alcance</h2>
             <p class="b2">Vive en el lugar de tus sueños</p>

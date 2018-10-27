@@ -4,25 +4,42 @@ class BootStrap {
 
     def init = { servletContext ->
 
-    Administrador administrador1 = new Administrador(nombre:'German', apellido:'Pioli', dni:'21524780', direccion:'Barrio Parque America', telefono:'3834101500', email:'admi@hotmail.com', usuario:'admi', contraseña:'123')
-    if(!administrador1.save(flush:true)){
+    def casa1= new Propiedad( calle:'Belgrano',
+      numero: 125,
+      barrio:'Centro',
+      localidad:'Capital',
+      ciudad: 'San Fernando del Valle de Catamarca',
+      superficie: 64,
+      precio: 1000000,
+      rubro: 'venta',
+      categoria:'Casa',
+      cantDormitorio:2,
+      cantBanios:1,
+      estado:'Libre')
+      casa1.save(flush:true)
 
-          administrador1.errors.allErrors.each{
 
-            println it
-          }
-        }
 
-    Inmobiliaria inmobiliaria1 = new Inmobiliaria(nombre:'SIGAI', direccion:'Miami Beach', administrador: administrador1)
-    if(!inmobiliaria1.save(flush:true)){
+     def casa2= new Propiedad( calle:'Salta',
+        numero: 15,
+        barrio:'Centro',
+        localidad:'Capital',
+        ciudad: 'San Fernando del Valle de Catamarca',
+        superficie: 100,
+        precio: 1520000,
+        rubro: 'alquiler',
+        categoria:'Casa',
+        cantDormitorio:3,
+        cantBanios:2,
+        estado:'Libre')
 
-          inmobiliaria1.errors.allErrors.each{
+      casa2.save(flush:true)
 
-            println it
-          }
-        }
-  
-   }
+
+      def administrador = new Usuario (usuario: 'admin', contrasenia:'admin')
+      administrador.save(flush:true)
+
+    }
     def destroy = {
     }
 }

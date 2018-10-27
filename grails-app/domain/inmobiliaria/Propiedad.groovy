@@ -9,15 +9,16 @@ class Propiedad {
     String ciudad
     BigDecimal superficie
     BigDecimal precio
-    String foto
+    String rubro
+    String rubroLocal
+    Integer cantBanios
+    Integer cantDormitorio
+    Integer piso
+    Integer nDepartamento
+    String categoria
+    String estado
 
-    static belongsTo = [persona: Persona]
-
-    void tazarPrecio(){
-
-    }
-
-    static constraints = {
+      static constraints = {
 
       calle(blank: false, maxSize: 100)
       numero(blank: false, maxSize: 6)
@@ -26,6 +27,13 @@ class Propiedad {
       ciudad(blank: false, maxSize: 100)
       superficie(blank: false)
       precio(blank: false)
-      foto(url: true)
+      rubro(blank: false, maxSize: 100, inList:['alquiler','venta'])
+      rubroLocal (blank:true, maxSize:20)
+      cantBanios(blank:false)
+      cantDormitorio(blank:true)
+      piso(blank:true, max:30)
+      nDepartamento(blank:true, max:200 )
+      categoria (blank: false, maxSize: 20, inList:['Casa','Departamento', 'Oficina', 'Local'])
+      estado (blank: false, maxSize: 15, inList:['Vendida', 'Alquilada', 'Libre'])
     }
 }
