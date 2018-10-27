@@ -9,6 +9,7 @@ class Propiedad {
     String ciudad
     BigDecimal superficie
     BigDecimal precio
+    String foto
 
     static belongsTo = [persona: Persona]
 
@@ -25,5 +26,6 @@ class Propiedad {
       ciudad(blank: false, maxSize: 100)
       superficie(blank: false)
       precio(blank: false)
+      foto(url: true)
     }
 }

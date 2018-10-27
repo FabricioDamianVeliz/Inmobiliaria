@@ -5,16 +5,22 @@
     box-sizing: border-box;
 }
 
-img{
-
-    display: block;
-    max-width: 100%;
-}
-
 body{
 
     margin: 0;
     font-family: 'Open Sans', sans-serif;
+}
+
+.header{
+
+    height: 60px;
+    text-align: center;
+}
+
+.header .contenedor{
+
+    display: inline-block;
+    justify-content: space-between;
 }
 
 h1,h2,h3,h4,h5,h6{
@@ -25,23 +31,6 @@ h1,h2,h3,h4,h5,h6{
     width: 100%;
 }
 
-/*Estilos del header*/
-
-.header{
-
-    height: 60px;
-    text-align: center;
-
-}
-
-.header .contenedor{
-
-    display: inline-block;
-    justify-content: space-between;
-}
-
-
-/*Estilos del menu*/
 .nav{
     position: absolute;
     top: 60px;
@@ -63,6 +52,7 @@ h1,h2,h3,h4,h5,h6{
 
   float: left;
 }
+
 .menu__link{
 
     display: block;
@@ -70,17 +60,12 @@ h1,h2,h3,h4,h5,h6{
     background: #FBA919;
     text-decoration: none;
     color: #fff;
-
 }
-
 
 .menu__link:hover{
     background: white;
     color: #FBA919;
 }
-
-
-/*Estilos del banner*/
 
 .banner{
 
@@ -88,6 +73,8 @@ h1,h2,h3,h4,h5,h6{
     position: relative;
     z-index: -1000;
 }
+
+
 
 .banner .contenedor{
 
@@ -98,9 +85,4 @@ h1,h2,h3,h4,h5,h6{
     width: 100%;
     color: #fff;
     text-align: center;
-}
-
-.banner__txt{
-
-    display: none;
 }
