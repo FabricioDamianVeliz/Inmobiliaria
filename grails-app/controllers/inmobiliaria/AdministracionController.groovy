@@ -8,11 +8,8 @@ class AdministracionController {
      }
 
 
-     def listarofertasventas(){
+     def principal(){
          [listadoventas: administracionService.listarofertasventas()]
-     }
-
-     def listarofertasalquiler(){
          [listadoalquiler: administracionService.listarofertasalquiler()]
      }
 
