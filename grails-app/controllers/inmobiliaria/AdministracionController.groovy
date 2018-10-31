@@ -7,10 +7,21 @@ class AdministracionController {
      render(view:"principal")
      }
 
+     def ventanaAdministrador() {
+      render(view:"administrador")
+      }
+
 
      def principal(){
-         [listadoventas: administracionService.listarofertasventas()]
-         [listadoalquiler: administracionService.listarofertasalquiler()]
+        // [listado: administracionService.listarVentas()]
+         render(view:"ofertas")
+
      }
+
+     def ofertas(){
+         [listado: administracionService.listarVentas() ]
+
+     }
+
 
 }

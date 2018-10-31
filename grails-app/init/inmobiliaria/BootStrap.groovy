@@ -26,7 +26,7 @@ class BootStrap {
         localidad:'Capital',
         ciudad: 'San Fernando del Valle de Catamarca',
         superficie: 100,
-        precio: 1520000,
+        precio: 4500,
         rubro: 'alquiler',
         categoria:'Casa',
         cantDormitorio:3,
