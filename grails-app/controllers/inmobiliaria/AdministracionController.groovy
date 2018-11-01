@@ -4,34 +4,31 @@ class AdministracionController {
     def administracionService
 
     def index() {
-     render(view:"principal")
+        render(view:"principal")
      }
 
-     def ventanaAdministrador() {
-      render(view:"administrador")
-      }
-
-      def ventanaOperador() {
-       render(view:"operador")
-       }
-
-       def sesion(){
-         render (view: "administrador")
-      }
-
-
-
-
-     def principal(){
-        // [listado: administracionService.listarVentas()]
-         render(view:"ofertas")
-
+    def ventanaAdministrador() {
+        render(view:"administrador")
      }
 
-     def ofertas(){
-         [listado: administracionService.listarVentas() ]
-
+    def ventanaOperador() {
+        render(view:"operador")
      }
 
+    def sesion(){
+        render (view: "administrador")
+     }
+
+    def principal(){
+        [listadoOfertas: administracionService.listarOfertas()]
+     }
+
+     def ventas(){
+        [listadoVentas: administracionService.listarVentas()]
+     }
+
+     def alquiler(){
+        [listadoAlquiler: administracionService.listarAlquiler()]
+     }
 
 }

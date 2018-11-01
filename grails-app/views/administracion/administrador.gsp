@@ -85,12 +85,7 @@
             <p>
                 Una inmobiliaria es una empresa dedicada a la construcción, la venta, el alquiler y la administración de viviendas. Cada inmobiliaria puede realizar todas estas actividades o sólo algunas.
             </p>
-
-
-
-
         </section>
     </div>
-
 </body>
 </html>
