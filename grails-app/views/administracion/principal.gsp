@@ -5,20 +5,30 @@
     <g:if env="development"><asset:stylesheet src="estilos.css"/></g:if>
 </head>
 <body>
-    <header class="header">
-        <div class="contenedor">
-            <h1 class="logo">SIGAI</h1>
-        </div>
-    </header>
 
-    <div class="contenedor">
-        <h2 class="logo"> OFERTAS </h2>
-    </div>
+  <header class="header">
+      <div class="contenedor">
+          <h1 class="logo"> SIGAI </h1>
+          <h2 class="logo"> MENU </h2>
 
+          <nav class="nav" id="nav"></nav>
+              <ul class="menu">
+                <li><g:link controller="administracion" action="ofertas">Listado de ofertas</g:link></li>
+                <li><g:link controller="administracion" action="ventas">Listado de ventas</g:link></li>
+                <li><g:link controller="administracion" action="alquiler">Listado de alquiler</g:link></li>
+                <li><g:link controller="login" action="login">Iniciar sesion</g:link></li>
 
+              </ul>
+      </div>
+  </header>
 
-      <li><g:link controller="administracion" action="ofertas">Listado</g:link></li>
-
+  <div class="banner">
+      <asset:image src="1.jpg" class="banner__img"/>
+      <div class="contenedor">
+          <h2 class="b1">Lo mejor a tu alcance</h2>
+          <p class="b2">Vive en el lugar de tus sueños</p>
+      </div>
+  </div>
 
       <!--<table>
         <tr>
@@ -55,7 +65,7 @@
               </tr>
           </g:each>
       </table>-->
-      <li><g:link controller="administracion" action="ventanaAdministrador">Ingresar como administrador</g:link></li>
+
 
 </body>
 </html>

@@ -20,7 +20,7 @@
 
       <h4 class="logo">PROPIEDADES EN OFERTA </h4>
 
-        <table border="1">
+        <table border="150">
 
         <tr>
           <th scope="col">categoria</th>
@@ -39,7 +39,7 @@
         </tr>
           <g:each in="${listado?}">
                 <tr>
-                  <td><g:link action="create" controller="Clientes">${it.categoria}</g:link></td>
+                  <td><g:link action="create" controller="clientes">${it.categoria}</g:link></td>
                   <td>${it.calle}</td>
                   <td>${it.numero}</td>
                   <td>${it.barrio}</td>

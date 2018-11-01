@@ -11,6 +11,16 @@ class AdministracionController {
       render(view:"administrador")
       }
 
+      def ventanaOperador() {
+       render(view:"operador")
+       }
+
+       def sesion(){
+         render (view: "administrador")
+      }
+
+
+
 
      def principal(){
         // [listado: administracionService.listarVentas()]

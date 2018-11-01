@@ -80,9 +80,8 @@
 
             <div class="collapse navbar-collapse " id="navbarCollapse">
               <ul class="navbar-nav mr-auto">
-                <li class="nav-item" ><button type="button" class="btn btn-inverse navbar-btn"><a href="http://localhost:8080/propiedad/index">PROPIEDADES</a></button></li>
-                <li class="nav-item"><button type="button" class="btn btn-inverse navbar-btn"><a href="http://localhost:8080/clientes/index">CLIENTES </a></button></li>
-                <li class="nav-item"><button type="button" class="btn btn-inverse navbar-btn"><a href="http://localhost:8080/vendedor/index">VENDEDORES </a></button></li>
+                <li class="nav-item" ><button type="button" class="btn btn-inverse navbar-btn"><a href="http://localhost:8080/administracion/ofertas">PROPIEDADES</a></button></li>
+                <li class="nav-item"><button type="button" class="btn btn-inverse navbar-btn"><a href="http://localhost:8080/administracion/index">COMENTARIOS </a></button></li>
                 <li class="nav-item"><button type="button" class="btn btn-inverse navbar-btn"><a href="http://localhost:8080/login/logout">CERRAR SESION</a></button></li>
               </ul>
 

@@ -1,7 +1,7 @@
 <!doctype html>
 <html>
 <head>
-    <meta name="layout" content="mainAdministrador"/>
+    <meta name="layout" content="mainOperador"/>
     <title>SIGAI</title>
 </head>
 <body>
