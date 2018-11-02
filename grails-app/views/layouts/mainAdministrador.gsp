@@ -81,9 +81,9 @@
             <div class="collapse navbar-collapse " id="navbarCollapse">
               <ul class="navbar-nav mr-auto">
                 <li class="nav-item" ><button type="button" class="btn btn-inverse navbar-btn"><a href="http://localhost:8080/propiedad/index">PROPIEDADES</a></button></li>
-                <li class="nav-item"><button type="button" class="btn btn-inverse navbar-btn"><a href="http://localhost:8080/administracion/index">CLIENTES </a></button></li>
+                <li class="nav-item"><button type="button" class="btn btn-inverse navbar-btn"><a href="http://localhost:8080/clientes/index">CLIENTES </a></button></li>
                 <li class="nav-item"><button type="button" class="btn btn-inverse navbar-btn"><a href="http://localhost:8080/vendedor/index">VENDEDORES </a></button></li>
-                <li class="nav-item"><button type="button" class="btn btn-inverse navbar-btn"><a href="http://localhost:8080/administracion/index">CERRAR SESION</a></button></li>
+                <li class="nav-item"><button type="button" class="btn btn-inverse navbar-btn"><a href="http://localhost:8080/login/logout">CERRAR SESION</a></button></li>
               </ul>
 
 
@@ -95,7 +95,6 @@
 
     <g:layoutBody/>
 
-    <div class="footer" role="contentinfo">Inmobiliaria &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Dirección &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Teléfono &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Horarios de Atención &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</div>
 
     <div id="spinner" class="spinner" style="display:none;">
         <g:message code="spinner.alt" default="Loading&hellip;"/>

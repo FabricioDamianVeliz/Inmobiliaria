@@ -47,7 +47,7 @@
     <!--  Agregado  -->
     <style>
         .svg .grails-logo-container .grails-logo{
-            height: 625px;
+            height: 700px;
             width: 1540px;
         }
         .navbar-default a{
@@ -85,21 +85,7 @@
             <p>
                 Una inmobiliaria es una empresa dedicada a la construcción, la venta, el alquiler y la administración de viviendas. Cada inmobiliaria puede realizar todas estas actividades o sólo algunas.
             </p>
-
-            <div id="controllers" role="navigation">
-                <h2>Controladores:</h2>
-                <ul>
-                    <g:each var="c" in="${grailsApplication.controllerClasses.sort { it.fullName } }">
-                        <li class="controller">
-                            <button type="button"><g:link controller="${c.logicalPropertyName}">${c.fullName}</g:link></button>
-                        </li>
-                    </g:each>
-                </ul>
-            </div>
-
-
         </section>
     </div>
-
 </body>
 </html>
