@@ -5,6 +5,12 @@ import grails.gorm.transactions.Transactional
 @Transactional
 class AdministracionService {
 
+
+      List listarClientes() {
+        def listado = Clientes.findAll()
+        return listado
+        }
+
       List listarVentas() {
             def ofertasVentas = Propiedad.findAll("from Propiedad as p where p.rubro=:venta", [venta: 'venta'])
             return ofertasVentas

@@ -44,6 +44,17 @@
     </style>
     <!--FIN Agregado-->
 
+
+
+
+
+
+
+
+
+
+
+
 </head>
 <body>
 
@@ -81,7 +92,7 @@
             <div class="collapse navbar-collapse " id="navbarCollapse">
               <ul class="navbar-nav mr-auto">
                 <li class="nav-item" ><button type="button" class="btn btn-inverse navbar-btn"><a href="http://localhost:8080/propiedad/index">PROPIEDADES</a></button></li>
-                <li class="nav-item"><button type="button" class="btn btn-inverse navbar-btn"><a href="http://localhost:8080/clientes/index">CLIENTES </a></button></li>
+                <li class="nav-item"><button type="button" class="btn btn-inverse navbar-btn"><a href="http://localhost:8080/administracion/clientes">CLIENTES </a></button></li>
                 <li class="nav-item"><button type="button" class="btn btn-inverse navbar-btn"><a href="http://localhost:8080/vendedor/index">VENDEDORES </a></button></li>
                 <li class="nav-item"><button type="button" class="btn btn-inverse navbar-btn"><a href="http://localhost:8080/login/logout">CERRAR SESION</a></button></li>
               </ul>
@@ -99,6 +110,7 @@
     <div id="spinner" class="spinner" style="display:none;">
         <g:message code="spinner.alt" default="Loading&hellip;"/>
     </div>
+
 
     <asset:javascript src="application.js"/>
 

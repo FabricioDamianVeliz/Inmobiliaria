@@ -8,11 +8,16 @@ class LoginController {
    }
 
     def u = Usuario.findByEmail(params.email)
+    //def roles = Usuario.getRoles()
+
      if (u) {
        if (u.password == u.generateMD5_A(params.password)) {
           session.usuario = u
+          //if(roles.authority=="ADMINISTRADOR"){
+            redirect(controller: "administracion", action: "sesion")
+          //}
 
-          redirect(controller: "administracion", action: "sesion")
+
 
         } else {
           render(view: "login", model: [message: "Constraseña Incorrecta"])

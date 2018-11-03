@@ -19,6 +19,10 @@ class AdministracionController {
         render (view: "administrador")
      }
 
+     def clientes(){
+        [listadoClientes: administracionService.listarClientes()]
+     }
+
     def principal(){
         [listadoOfertas: administracionService.listarOfertas()]
      }

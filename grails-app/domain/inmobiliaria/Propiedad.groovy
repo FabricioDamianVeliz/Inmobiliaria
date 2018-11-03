@@ -17,6 +17,10 @@ class Propiedad {
     Integer nDepartamento
     String categoria
     String estado
+    
+
+
+
 
     static constraints = {
 
@@ -35,5 +39,6 @@ class Propiedad {
   nDepartamento(nullable:true, blank:true, max:200 )
   categoria (blank: false, maxSize: 20, inList:['Casa','Departamento', 'Oficina', 'Local'])
   estado (blank: false, maxSize: 15, inList:['Vendida', 'Alquilada', 'Libre'])
+
 }
 }
