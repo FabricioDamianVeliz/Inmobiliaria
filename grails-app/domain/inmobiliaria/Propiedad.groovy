@@ -18,10 +18,6 @@ class Propiedad {
     String categoria
     String estado
 
-
-    static belongsTo = [vendedor:Vendedor]
-
-
     static constraints = {
 
   calle(blank: false, maxSize: 100)
@@ -31,7 +27,7 @@ class Propiedad {
   ciudad(blank: false, maxSize: 100)
   superficie(blank: false)
   precio(blank: false)
-  rubro(blank: false, maxSize: 100, inList:['alquiler','venta'])
+  rubro(blank: false, maxSize: 100, inList:['Alquiler','Venta'])
   rubroLocal (nullable:true, maxSize:20)
   cantBanios(blank:false)
   cantDormitorio(nullable:true, blank:true)
@@ -39,6 +35,5 @@ class Propiedad {
   nDepartamento(nullable:true, blank:true, max:200 )
   categoria (blank: false, maxSize: 20, inList:['Casa','Departamento', 'Oficina', 'Local'])
   estado (blank: false, maxSize: 15, inList:['Vendida', 'Alquilada', 'Libre'])
-
 }
 }

@@ -10,7 +10,7 @@
     <meta name="description" content="#">
     <meta name="keywords" content="#">
     <!-- Page Title -->
-    <title>SIGAI</title>
+    <title>Listing &amp; Directory Website Template</title>
     <!-- Bootstrap CSS -->
     <g:if env="development"><asset:stylesheet src="bootstrap.min.css"/></g:if>
     <!-- Google Fonts -->
@@ -35,7 +35,7 @@
                 <div class="row">
                     <div class="col-md-12">
                         <nav class="navbar navbar-expand-lg navbar-light">
-                            <a class="navbar-brand" href="index.html">SIGAI</a>
+                            <a><g:link controller="administracion" action="principal" class="navbar-brand">SIGAI</g:link></a>
                             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="icon-menu"></span>
               </button>
@@ -57,10 +57,10 @@
                                 --->
                                     <li><g:link controller="administracion" action="ventas" class="nav-link">Ventas</g:link></li>
                                     <li><g:link controller="administracion" action="alquiler" class="nav-link">Alquiler</g:link></li>
-                                    <li><g:link controller="administracion" action="consulta" class="nav-link">Consulta</g:link></li>
-                                    <li> <div class="btn btn-outline-light top-btn"><g:link  controller="login" action="login" class="nav-link"><span class="ti-plus"></span> Iniciar Sesion</a></g:link></div></li>
-
-                                  </ul>
+                                    <li><g:link controller="administracion" action="consulta" class="nav-link">Consultas</g:link></li>
+            
+                                    <li><a><g:link controller="login" action="login" class="btn btn-outline-light top-btn">Iniciar Sesion</g:link></a></li>
+                                </ul>
                             </div>
                         </nav>
                     </div>
@@ -80,23 +80,23 @@
                             <div class="col-md-12">
                                 <div class="slider-content_wrap">
                                     <h1>Vive en el lugar de tus sueños</h1>
+                                    <h5>Let's uncover the best places to eat, drink, and shop nearest to you.</h5>
                                 </div>
                             </div>
                         </div>
                         <div class="row d-flex justify-content-center">
                             <div class="col-md-10">
-                                <g:form controller="administracion" action="ventas1" class="form-wrap mt-4">
+                                <form class="form-wrap mt-4">
                                     <div class="btn-group" role="group" aria-label="Basic example">
-
-                                        <g:field type="text" placeholder="Rubro" name="rubro" class="btn-group1"/>
-                                        <g:field type="text" placeholder="Localidad" name="localidad" class="btn-group1"/>
-                                        <g:field type="text" placeholder="Barrio" name="barrio" class="btn-group1"/>
-                                        <g:submitButton name="submit" class="btn-form" value="Buscar"/>
-
-
+                                        <input type="text" placeholder="What are your looking for?" class="btn-group1">
+                                        <input type="text" placeholder="New york" class="btn-group2">
+                                        <button type="submit" class="btn-form"><span class="icon-magnifier search-icon"></span>SEARCH<i class="pe-7s-angle-right"></i></button>
                                     </div>
-                                    </g:form>
-                              </div>
+                                </form>
+                                <div class="slider-link">
+                                    <a href="#">Browse Popular</a><span>or</span> <a href="#">Recently Added</a>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -106,53 +106,56 @@
     <!--// SLIDER -->
     <!--//END HEADER -->
     <!--============================= FEATURED PLACES =============================-->
-
-
-
-
     <section class="main-block light-bg">
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-md-5">
                     <div class="styled-heading">
-                        <h3>PROPIEDADES EN OFERTAS</h3>
-
+                        <h3>Propiedades en Oferta</h3>
                     </div>
                 </div>
             </div>
             <div class="row">
+
+            <g:each in="${listadoOfertas?}">
+
                 <div class="col-md-4 featured-responsive">
                     <div class="featured-place-wrap">
-                        <a href="detail.html">
+                        <a><g:link controller="clientes" action="create">
                             <asset:image src="images/featured1.jpg" class="img-fluid" alt="#"/>
-                            <span class="featured-rating-orange">6.5</span>
+                            <span class="featured-rating-green">6.5</span>
                             <div class="featured-title-box">
-                                <h6>Burger & Lobster</h6>
-                                <p>Restaurant </p> <span>• </span>
-                                <p>3 Reviews</p> <span> • </span>
-                                <p><span>$$$</span>$$</p>
+                                <h6>${it.rubro}</h6>
+                                <p>${it.categoria}</p> <span>• </span>
+                                <p>${it.superficie} ms</p> <span> • </span>
+                                <p><span>${it.precio}$$</span></p>
                                 <ul>
                                     <li><span class="icon-location-pin"></span>
-                                        <p>1301 Avenue, Brooklyn, NY 11230</p>
+                                        <p>${it.calle}, ${it.barrio}, ${it.numero}</p>
                                     </li>
                                     <li><span class="icon-screen-smartphone"></span>
-                                        <p>+44 20 7336 8898</p>
+                                        <p>Piso: ${it.piso} &nbsp</p><span>• </span>
+                                        <p>N° Departamento: ${it.nDepartamento} &nbsp</p>
                                     </li>
                                     <li><span class="icon-link"></span>
-                                        <p>https://burgerandlobster.com</p>
+                                        <p>Baños: ${it.cantBanios} &nbsp</p><span>• </span>
+                                        <p>Dormitorios: ${it.cantDormitorio} &nbsp</p>
                                     </li>
 
                                 </ul>
                                 <div class="bottom-icons">
-                                    <div class="closed-now">CLOSED NOW</div>
+                                    <div class="closed-now">CONSULTAR</div>
                                     <span class="ti-heart"></span>
                                     <span class="ti-bookmark"></span>
                                 </div>
                             </div>
-                        </a>
+                        </g:link></a>
                     </div>
                 </div>
-                <div class="col-md-4 featured-responsive">
+
+            </g:each>
+
+            <!--    <div class="col-md-4 featured-responsive">
                     <div class="featured-place-wrap">
                         <a href="detail.html">
                             <asset:image src="images/featured2.jpg" class="img-fluid" alt="#"/>
@@ -214,7 +217,8 @@
                         </a>
                     </div>
                 </div>
-            </div>
+            </div>  -->
+        </div>    
             <div class="row justify-content-center">
                 <div class="col-md-4">
                     <div class="featured-btn-wrap">
@@ -222,7 +226,6 @@
                     </div>
                 </div>
             </div>
-        </div>
     </section>
     <!--//END FEATURED PLACES -->
     <!--============================= CATEGORIES =============================-->
@@ -231,7 +234,7 @@
             <div class="row justify-content-center">
                 <div class="col-md-5">
                     <div class="styled-heading">
-                        <h3>CATEGORIAS DE PROPIEDADES</h3>
+                        <h3>Browse Categories</h3>
                     </div>
                 </div>
             </div>
@@ -332,7 +335,27 @@
         </div>
     </section>
     <!--//END CATEGORIES -->
-
+    <!--============================= ADD LISTING =============================-->
+    <section class="main-block light-bg">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="add-listing-wrap">
+                        <h2>Reach millions of People</h2>
+                        <p>Add your Business infront of millions and earn 3x profits from our listing</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-md-4">
+                    <div class="featured-btn-wrap">
+                        <a href="#" class="btn btn-danger"><span class="ti-plus"></span> ADD LISTING</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--//END ADD LISTING -->
     <!--============================= FOOTER =============================-->
     <footer class="main-block dark-bg">
         <div class="container">
@@ -340,7 +363,7 @@
                 <div class="col-md-12">
                     <div class="copyright">
                         <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-                        <p>Copyright &copy; 2018 CATAMARCA ARGENTINA <i class="ti-heart" aria-hidden="true"></i> by <a href="http://tecno.unca.edu.ar/" target="_blank">Universidad Nacional de Catamarca</a></p>
+                        <p>Copyright &copy; 2018 Listing. All rights reserved | This template is made with <i class="ti-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a></p>
                         <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
                         <ul>
                             <li><a href="#"><span class="ti-facebook"></span></a></li>

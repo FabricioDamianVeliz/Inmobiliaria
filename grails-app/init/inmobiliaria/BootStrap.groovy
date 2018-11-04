@@ -4,8 +4,8 @@ class BootStrap {
 
   def init = { servletContext ->
 
-  //Propiedades en Alquilar  
-    
+  //Propiedades en Alquilar
+
     def prop1= new Propiedad( calle:'Belgrano',
     numero: 125,
     barrio:'Centro',
@@ -13,7 +13,7 @@ class BootStrap {
     ciudad: 'San Fernando del Valle de Catamarca',
     superficie: 64,
     precio: 1000000,
-    rubro: 'venta',
+    rubro: 'Venta',
     categoria:'Casa',
     cantDormitorio:2,
     cantBanios:1,
@@ -28,7 +28,7 @@ class BootStrap {
     ciudad: 'San Fernando del Valle de Catamarca',
     superficie: 100,
     precio: 90000,
-    rubro: 'venta',
+    rubro: 'Venta',
     categoria:'Local',
     cantDormitorio:3,
     cantBanios:2,
@@ -43,7 +43,7 @@ class BootStrap {
     ciudad: 'San Fernando del Valle de Catamarca',
     superficie: 100,
     precio: 120000,
-    rubro: 'venta',
+    rubro: 'Venta',
     categoria:'Departamento',
     cantDormitorio:3,
     cantBanios:2,
@@ -58,7 +58,7 @@ class BootStrap {
     ciudad: 'San Fernando del Valle de Catamarca',
     superficie: 100,
     precio: 200000,
-    rubro: 'venta',
+    rubro: 'Venta',
     categoria:'Oficina',
     cantDormitorio:3,
     cantBanios:2,
@@ -73,7 +73,7 @@ class BootStrap {
     ciudad: 'San Fernando del Valle de Catamarca',
     superficie: 64,
     precio: 1000000,
-    rubro: 'venta',
+    rubro: 'Venta',
     categoria:'Casa',
     cantDormitorio:2,
     cantBanios:1,
@@ -88,7 +88,7 @@ class BootStrap {
     ciudad: 'San Fernando del Valle de Catamarca',
     superficie: 100,
     precio: 50000,
-    rubro: 'venta',
+    rubro: 'Venta',
     categoria:'Local',
     cantDormitorio:3,
     cantBanios:2,
@@ -103,7 +103,7 @@ class BootStrap {
     ciudad: 'San Fernando del Valle de Catamarca',
     superficie: 100,
     precio: 120000,
-    rubro: 'venta',
+    rubro: 'Venta',
     categoria:'Departamento',
     cantDormitorio:3,
     cantBanios:2,
@@ -118,7 +118,7 @@ class BootStrap {
     ciudad: 'San Fernando del Valle de Catamarca',
     superficie: 100,
     precio: 300000,
-    rubro: 'venta',
+    rubro: 'Venta',
     categoria:'Oficina',
     cantDormitorio:3,
     cantBanios:2,
@@ -135,7 +135,7 @@ class BootStrap {
     ciudad: 'San Fernando del Valle de Catamarca',
     superficie: 100,
     precio: 70000,
-    rubro: 'alquiler',
+    rubro: 'Alquiler',
     categoria:'Casa',
     cantDormitorio:3,
     cantBanios:2,
@@ -150,14 +150,21 @@ class BootStrap {
     ciudad: 'San Fernando del Valle de Catamarca',
     superficie: 100,
     precio: 30000,
-    rubro: 'alquiler',
+    rubro: 'Alquiler',
     categoria:'Casa',
     cantDormitorio:3,
     cantBanios:2,
     estado:'Libre')
     prop10.save(flush:true)
-
     
+    //Consultas
+    def consulta1= new Consulta( nombre:'Fabricio',
+    apellido: 'Veliz',
+    telefono:'4441019',
+    direccion:'Santa Rosa',
+    comentario: 'Y ELLA?')
+    consulta1.save(flush:true)
+
   //Usuarios
 
     def usuario1 = new Usuario(nombreUsuario: "Fabricio" ,password: "12345",email: "fabricio@gmail.com")

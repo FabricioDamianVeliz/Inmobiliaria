@@ -9,7 +9,7 @@ class Contrato {
 	Date fecha;
 //static belongsTo = [cliente_dueño: Cliente] // el dueñño de la propiedad
 //static belongsTo = [cliente_comprador: Cliente] // el cliente de la propiedad
-static belongsTo = [propiedad:Propiedad ,comprador:Comprador ]// la propiedad en cuestion
+//static belongsTo = [propiedad:Propiedad ,comprador:Comprador ]// la propiedad en cuestion
 
     static constraints = {
     	descripcion (blank:false , maxSize:50)

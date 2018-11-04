@@ -36,10 +36,8 @@ class AdministracionController {
 
      def pendiente(){
         [listadoConsultas: administracionService.listarConsultas()]
-        render (view: "/administracion/clientes")
+        //render (view: "/administracion/clientes")
      }
-
-
 
     def principal(){
         [listadoOfertas: administracionService.listarOfertas()]
@@ -51,10 +49,6 @@ class AdministracionController {
 
      def alquiler(){
         [listadoAlquiler: administracionService.listarAlquiler()]
-     }
-
-     def ventas1(){
-           [listadoVentas1: administracionService.listarVentas1(params.rubro, params.localidad, params.barrio)]
      }
 
 }
