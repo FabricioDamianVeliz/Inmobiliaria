@@ -34,9 +34,9 @@ class AdministracionController {
           //redirect(controller:"administracion",action:"pendiente")
        }
 
-     def pendiente(){
-        [listadoConsultas: administracionService.listarConsultas()]
-        //render (view: "/administracion/clientes")
+     def pendientes(){
+     [listadoConsultas: administracionService.listarConsultas()]
+
      }
 
     def principal(){
@@ -50,5 +50,14 @@ class AdministracionController {
      def alquiler(){
         [listadoAlquiler: administracionService.listarAlquiler()]
      }
+
+
+     def ventasbuscador(){
+        [listadoVentasbuscador: administracionService.listarVentasbuscador(params.rubro, params.localidad, params.barrio)]
+     }
+     def ventapropiedad(){
+        render (view: "ventapropiedad")
+     }
+
 
 }

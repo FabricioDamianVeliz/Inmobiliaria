@@ -3,7 +3,6 @@
 
 <head>
   <meta name="layout" content="main"/>
-
 </head>
 
 <body>
@@ -18,29 +17,7 @@
                             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="icon-menu"></span>
               </button>
-                            <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
-                                <ul class="navbar-nav">
 
-                                <!--    <li class="nav-item active">
-                                        <a class="nav-link" href="#">Ventas</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="#">Alquiler</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="#">Consultas</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="#">Iniciar Sesion</a>
-                                    </li>
-                                --->
-                                    <li><g:link controller="administracion" action="ventas" class="nav-link">Ventas</g:link></li>
-                                    <li><g:link controller="administracion" action="alquiler" class="nav-link">Alquiler</g:link></li>
-                                    <li><g:link controller="administracion" action="consulta" class="nav-link">Consultas</g:link></li>
-
-                                    <li><a><g:link controller="login" action="login" class="btn btn-outline-light top-btn">Iniciar Sesion</g:link></a></li>
-                                </ul>
-                            </div>
                         </nav>
                     </div>
                 </div>
@@ -87,33 +64,35 @@
     </section>
     <!--// SLIDER -->
     <!--//END HEADER -->
+
+
     <!--============================= FEATURED PLACES =============================-->
     <section class="main-block light-bg">
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-md-5">
                     <div class="styled-heading">
-                        <h3>Propiedades en Alquiler</h3>
+                        <h3>Propiedades en Oferta</h3>
                     </div>
                 </div>
             </div>
+            <div class="row">
 
-        <div class="row">
-            <g:each in="${listadoAlquiler?}">
+            <g:each in="${listadoOfertas?}">
 
                 <div class="col-md-4 featured-responsive">
                     <div class="featured-place-wrap">
-                        <a><g:link controller="administracion" action="consulta">
+                        <a><g:link controller="Administracion" action="consulta">
                             <asset:image src="images/featured1.jpg" class="img-fluid" alt="#"/>
-                            <span class="featured-rating-orange">9.5</span>
+                            <span class="featured-rating-green">6.5</span>
                             <div class="featured-title-box">
                                 <h6>${it.rubro}</h6>
                                 <p>${it.categoria}</p> <span>• </span>
                                 <p>${it.superficie} ms</p> <span> • </span>
-                                <p><span>${it.precio}</span>$$</p>
+                                <p><span>${it.precio}$$</span></p>
                                 <ul>
                                     <li><span class="icon-location-pin"></span>
-                                        <p>${it.calle} ${it.numero}, ${it.barrio}</p>
+                                        <p>${it.calle}, ${it.barrio}, ${it.numero}</p>
                                     </li>
                                     <li><span class="icon-screen-smartphone"></span>
                                         <p>Piso: ${it.piso} &nbsp</p><span>• </span>
@@ -126,16 +105,17 @@
 
                                 </ul>
                                 <div class="bottom-icons">
-                                    <div class="closed-now">CONSULTA</div>
+                                    <div class="closed-now">CONSULTAR</div>
                                     <span class="ti-heart"></span>
                                     <span class="ti-bookmark"></span>
                                 </div>
                             </div>
-                        </g:link></a></a>
+                        </g:link></a>
                     </div>
                 </div>
 
             </g:each>
+
             <!--    <div class="col-md-4 featured-responsive">
                     <div class="featured-place-wrap">
                         <a href="detail.html">
@@ -199,7 +179,17 @@
                     </div>
                 </div>
             </div>  -->
-
+        </div>
+            <div class="row justify-content-center">
+                <div class="col-md-4">
+                    <div class="featured-btn-wrap">
+                        <a href="#" class="btn btn-danger">VIEW ALL</a>
+                    </div>
+                </div>
+            </div>
+    </section>
+    <!--//END FEATURED PLACES -->
+    <!--============================= CATEGORIES =============================-->
 
 </body>
 

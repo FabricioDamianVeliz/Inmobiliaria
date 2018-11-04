@@ -9,7 +9,7 @@ class Consulta {
   String estado
 
 
-  Consulta(String nombre,String apellido,Integer telefono,String email,String comentario){
+ Consulta(String nombre,String apellido,Integer telefono,String email,String comentario){
 
     this.nombre=nombre
     this.apellido=apellido

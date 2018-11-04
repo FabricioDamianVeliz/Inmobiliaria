@@ -6,11 +6,9 @@ import grails.gorm.transactions.Transactional
 class AdministracionService {
 
     List listarConsultas() {
-    def listado = Consulta.findAll()
+    def listado = Consulta.findAll("from Consulta as c where c.estado=:estado", [estado: 'No Leido'])
     return listado
     }
-
-
 
       void altaConsulta(Map params) {
 
@@ -31,8 +29,14 @@ class AdministracionService {
             }
 
       List listarOfertas() {
-            def ofertas = Propiedad.findAll("from Propiedad as p where (p.precio<=:precioVenta and p.rubro=:venta and p.estado=:estado) or (p.precio<=:precioAlquiler and p.rubro=:alquiler and p.estado=:estado) ", [precioVenta: 90000.00, venta: 'Venta', estado: 'Libre', precioAlquiler: 50000.00, alquiler: 'Alquiler'])
+            def ofertas = Propiedad.findAll("from Propiedad as p where (p.precio<=:precioVenta and p.rubro=:venta and p.estado=:estado) or (p.precio<=:precioAlquiler and p.rubro=:alquiler and p.estado=:estado) ", [precioVenta: 1000000.00, venta: 'Venta', estado: 'Libre', precioAlquiler: 3000.00, alquiler: 'Alquiler'])
             return ofertas
             }
+
+
+            List listarVentasbuscador(String rubro, String localidad, String barrio) {
+                  def listadoventasbuscador = Propiedad.findAll("from Propiedad as p where (p.rubro=:rubros and p.localidad=:localidades and p.barrio=:barrios)", [rubros: rubro, localidades: localidad, barrios: barrio])
+                  return listadoventasbuscador
+                  }
 
 }

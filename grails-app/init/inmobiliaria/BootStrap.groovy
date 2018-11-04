@@ -156,7 +156,7 @@ class BootStrap {
     cantBanios:2,
     estado:'Libre')
     prop10.save(flush:true)
-    
+
     //Consultas
     def consulta1= new Consulta( nombre:'Fabricio',
     apellido: 'Veliz',
@@ -208,6 +208,10 @@ class BootStrap {
         println it
       }
     }
+
+
+
+
 
     }
     def destroy = {

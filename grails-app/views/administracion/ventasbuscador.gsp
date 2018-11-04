@@ -87,19 +87,21 @@
     </section>
     <!--// SLIDER -->
     <!--//END HEADER -->
+
+
     <!--============================= FEATURED PLACES =============================-->
     <section class="main-block light-bg">
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-md-5">
                     <div class="styled-heading">
-                        <h3>Propiedades en Alquiler</h3>
+                        <h3>Resultado de Busqueda</h3>
                     </div>
                 </div>
             </div>
 
         <div class="row">
-            <g:each in="${listadoAlquiler?}">
+            <g:each in="${listadoVentasbuscador?}">
 
                 <div class="col-md-4 featured-responsive">
                     <div class="featured-place-wrap">
@@ -131,7 +133,7 @@
                                     <span class="ti-bookmark"></span>
                                 </div>
                             </div>
-                        </g:link></a></a>
+                        </g:link></a>
                     </div>
                 </div>
 
@@ -200,6 +202,7 @@
                 </div>
             </div>  -->
 
+    <!--//END FEATURED PLACES -->
 
 </body>
 
