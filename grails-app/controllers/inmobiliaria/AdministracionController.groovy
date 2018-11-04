@@ -15,31 +15,9 @@ class AdministracionController {
         render(view:"operador")
      }
 
-    def sesionAdministrador(){
+    def sesion(){
         render (view: "administrador")
      }
-
-     def sesionOperador(){
-         render (view: "operador")
-      }
-
-      def consulta(){
-        [consulta: new Consulta()]
-        render (view: "consulta")
-      }
-
-      def guardarConsulta(){
-          administracionService.altaConsulta(params)
-          render (view: "/administracion/principal")
-          //redirect(controller:"administracion",action:"pendiente")
-       }
-
-     def pendiente(){
-        [listadoConsultas: administracionService.listarConsultas()]
-        render (view: "/administracion/clientes")
-     }
-
-
 
     def principal(){
         [listadoOfertas: administracionService.listarOfertas()]
@@ -51,10 +29,6 @@ class AdministracionController {
 
      def alquiler(){
         [listadoAlquiler: administracionService.listarAlquiler()]
-     }
-
-     def ventas1(){
-           [listadoVentas1: administracionService.listarVentas1(params.rubro, params.localidad, params.barrio)]
      }
 
 }
