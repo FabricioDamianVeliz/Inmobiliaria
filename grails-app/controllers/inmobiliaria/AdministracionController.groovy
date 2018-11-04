@@ -15,13 +15,31 @@ class AdministracionController {
         render(view:"operador")
      }
 
-    def sesion(){
+    def sesionAdministrador(){
         render (view: "administrador")
      }
 
-     def clientes(){
-        [listadoClientes: administracionService.listarClientes()]
+     def sesionOperador(){
+         render (view: "operador")
+      }
+
+      def consulta(){
+        [consulta: new Consulta()]
+        render (view: "consulta")
+      }
+
+      def guardarConsulta(){
+          administracionService.altaConsulta(params)
+          render (view: "/administracion/principal")
+          //redirect(controller:"administracion",action:"pendiente")
+       }
+
+     def pendiente(){
+        [listadoConsultas: administracionService.listarConsultas()]
+        render (view: "/administracion/clientes")
      }
+
+
 
     def principal(){
         [listadoOfertas: administracionService.listarOfertas()]

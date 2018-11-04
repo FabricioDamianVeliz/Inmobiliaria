@@ -96,7 +96,4 @@ class PropiedadController {
             '*'{ render status: NOT_FOUND }
         }
     }
-
-
-
 }

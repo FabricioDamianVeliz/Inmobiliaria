@@ -6,10 +6,19 @@ import grails.gorm.transactions.Transactional
 class AdministracionService {
 
 
-      List listarClientes() {
-        def listado = Clientes.findAll()
+      List listarConsultas() {
+        def listado = Consulta.findAll()
         return listado
         }
+
+
+
+          void altaConsulta(Map params) {
+
+                def consulta = new Consulta().save(flush:true)
+
+
+          }
 
       List listarVentas() {
             def ofertasVentas = Propiedad.findAll("from Propiedad as p where p.rubro=:venta", [venta: 'venta'])
@@ -19,7 +28,7 @@ class AdministracionService {
 
 
             List listarVentas1(String rubro, String localidad, String barrio) {
-                  def ofertasVentas1 = Propiedad.findAll("from Propiedad as p where (p.rubro=:rubros and p.localidad=:localidades and p.barrio=:barrios)", [rubros: rubro, localidades: localidad, barrios: barrio])
+                  def ofertasVentas1 = Propiedad.findAll("from Propiedad as p where (p.rubro=:rubros or p.localidad=:localidades or p.barrio=:barrios)", [rubros: rubro, localidades: localidad, barrios: barrio])
                   return ofertasVentas1
                   }
 

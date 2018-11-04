@@ -91,7 +91,7 @@
 
             <div class="collapse navbar-collapse " id="navbarCollapse">
               <ul class="navbar-nav mr-auto">
-                <li class="nav-item"><button type="button" class="btn btn-inverse navbar-btn"><a href="http://localhost:8080/administracion/index">VOLVER AL INICIO</a></button></li>
+                <li class="nav-item"><button type="button" class="btn btn-inverse navbar-btn"><g:link controller="administracion" action="index">VOLVER AL INICIO</g:link></button></li>
               </ul>
 
 

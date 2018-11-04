@@ -91,10 +91,11 @@
 
             <div class="collapse navbar-collapse " id="navbarCollapse">
               <ul class="navbar-nav mr-auto">
-                <li class="nav-item" ><button type="button" class="btn btn-inverse navbar-btn"><a href="http://localhost:8080/propiedad/index">PROPIEDADES</a></button></li>
-                <li class="nav-item"><button type="button" class="btn btn-inverse navbar-btn"><a href="http://localhost:8080/administracion/clientes">CLIENTES </a></button></li>
-                <li class="nav-item"><button type="button" class="btn btn-inverse navbar-btn"><a href="http://localhost:8080/vendedor/index">VENDEDORES </a></button></li>
-                <li class="nav-item"><button type="button" class="btn btn-inverse navbar-btn"><a href="http://localhost:8080/login/logout">CERRAR SESION</a></button></li>
+
+                <li class="nav-item" ><button type="button" class="btn btn-inverse navbar-btn"><g:link controller="propiedad" action="index">PROPIEDADES</g:link></button></li>
+                <li class="nav-item"><button type="button" class="btn btn-inverse navbar-btn"><g:link controller="administracion" action="pendiente">CONSULTAS PENDIENTES </g:link></button></li>
+                <li class="nav-item"><button type="button" class="btn btn-inverse navbar-btn"><g:link controller="vendedor" action="index">VENDEDORES </g:link></button></li>
+                <li class="nav-item"><button type="button" class="btn btn-inverse navbar-btn"><g:link controller="login" action="logout">CERRAR SESION</g:link></button></li>
               </ul>
 
 

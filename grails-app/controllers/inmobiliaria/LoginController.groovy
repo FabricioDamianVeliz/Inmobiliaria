@@ -14,8 +14,12 @@ class LoginController {
        if (u.password == u.generateMD5_A(params.password)) {
           session.usuario = u
           //if(roles.authority=="ADMINISTRADOR"){
-            redirect(controller: "administracion", action: "sesion")
-          //}
+          if(session.usuario.getRoles().any{it.authority=='ADMINISTRADOR'}) {
+            redirect(controller: "administracion", action: "sesionAdministrador")
+          }
+          else{
+            redirect(controller: "administracion", action: "sesionOperador")
+          }
 
 
 

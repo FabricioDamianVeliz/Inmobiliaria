@@ -17,9 +17,9 @@ class Propiedad {
     Integer nDepartamento
     String categoria
     String estado
-    
 
 
+    static belongsTo = [vendedor:Vendedor]
 
 
     static constraints = {

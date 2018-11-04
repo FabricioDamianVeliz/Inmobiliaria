@@ -57,6 +57,7 @@
                                 --->
                                     <li><g:link controller="administracion" action="ventas" class="nav-link">Ventas</g:link></li>
                                     <li><g:link controller="administracion" action="alquiler" class="nav-link">Alquiler</g:link></li>
+                                    <li><g:link controller="administracion" action="consulta" class="nav-link">Consulta</g:link></li>
                                     <li> <div class="btn btn-outline-light top-btn"><g:link  controller="login" action="login" class="nav-link"><span class="ti-plus"></span> Iniciar Sesion</a></g:link></div></li>
 
                                   </ul>
@@ -84,7 +85,7 @@
                         </div>
                         <div class="row d-flex justify-content-center">
                             <div class="col-md-10">
-                                <g:form action="ventas1" class="form-wrap mt-4">
+                                <g:form controller="administracion" action="ventas1" class="form-wrap mt-4">
                                     <div class="btn-group" role="group" aria-label="Basic example">
 
                                         <g:field type="text" placeholder="Rubro" name="rubro" class="btn-group1"/>
@@ -115,7 +116,7 @@
                 <div class="col-md-5">
                     <div class="styled-heading">
                         <h3>PROPIEDADES EN OFERTAS</h3>
-                        
+
                     </div>
                 </div>
             </div>
