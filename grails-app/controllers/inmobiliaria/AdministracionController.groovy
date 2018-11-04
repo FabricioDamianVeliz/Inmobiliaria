@@ -15,11 +15,10 @@ class AdministracionController {
         render(view:"operador")
      }
 
-    def sesion(){
+    def sesionAdministrador(){
         render (view: "administrador")
      }
 
-<<<<<<< HEAD
      def sesionOperador(){
          render (view: "operador")
       }
@@ -40,8 +39,6 @@ class AdministracionController {
         //render (view: "/administracion/clientes")
      }
 
-=======
->>>>>>> 73a159cac8cc7d633808416cd4ff7d43f1d4f4fc
     def principal(){
         [listadoOfertas: administracionService.listarOfertas()]
      }
