@@ -5,63 +5,67 @@ class AdministracionController {
 
     def index() {
         render(view:"principal")
-     }
-
-     def volver() {
-         render(view:"administrador")
-      }
-
-    def ventanaAdministrador() {
-        render(view:"administrador")
-     }
-
-    def ventanaOperador() {
-        render(view:"operador")
-     }
-
-    def sesionAdministrador(){
-        render (view: "administrador")
-     }
-
-     def sesionOperador(){
-         render (view: "operador")
-      }
-
-      def consulta(){
-        [consulta: new Consulta()]
-        render (view: "consulta")
-      }
-
-      def guardarConsulta(){
-          administracionService.altaConsulta(params)
-          render (view: "/administracion/principal")
-          //redirect(controller:"administracion",action:"pendiente")
-       }
-
-     def pendientes(){
-     [listadoConsultas: administracionService.listarConsultas()]
-
-     }
+    }
 
     def principal(){
         [listadoOfertas: administracionService.listarOfertas()]
-     }
+    }
 
-     def ventas(){
+    def ventas(){
         [listadoVentas: administracionService.listarVentas()]
-     }
+    }
 
-     def alquiler(){
+    def alquiler(){
         [listadoAlquiler: administracionService.listarAlquiler()]
-     }
+    }
 
+    def volver() {
+        render(view:"administrador")
+    }
 
-     def ventasbuscador(){
+    def ventanaAdministrador() {
+        render(view:"administrador")
+    }
+
+    def ventanaOperador() {
+        render(view:"operador")
+    }
+
+    def sesionAdministrador(){
+        render (view: "administrador")
+    }
+
+    def sesionOperador(){
+        render (view: "operador")
+    }
+
+    def consulta(){
+        [consulta: new Consulta()]
+        render (view: "consulta")
+    }
+
+    def guardarConsulta(){
+        administracionService.altaConsulta(params)
+        render (view: "/administracion/principal")
+        //redirect(controller:"administracion",action:"pendiente")
+    }
+
+    def pendientes(){
+        [listadoConsultas: administracionService.listarConsultas()]
+    }
+
+    def ventasbuscador(){
         [listadoVentasbuscador: administracionService.listarVentasbuscador(params.rubro, params.localidad, params.barrio)]
-     }
-     def ventapropiedad(){
+    }
+
+    def ventapropiedad(){
         render (view: "ventapropiedad")
-     }
+    }
+
+    def estadoConsulta(){
+        administracionService.quitarConsulta(new Long(params.id))
+        redirect(action:"pendientes")
+    }
 
 
 }

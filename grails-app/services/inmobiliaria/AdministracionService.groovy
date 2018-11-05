@@ -5,19 +5,6 @@ import grails.gorm.transactions.Transactional
 @Transactional
 class AdministracionService {
 
-    List listarConsultas() {
-    def listado = Consulta.findAll("from Consulta as c where c.estado=:estado", [estado: 'No Leido'])
-    return listado
-    }
-
-      void altaConsulta(Map params) {
-
-            def consulta = new Consulta(params)
-            consulta.setEstado("No Leido")
-            consulta.save(flush:true)
-
-      }
-
       List listarVentas() {
             def ofertasVentas = Propiedad.findAll("from Propiedad as p where p.rubro=:venta", [venta: 'Venta'])
             return ofertasVentas
@@ -34,9 +21,26 @@ class AdministracionService {
             }
 
 
-            List listarVentasbuscador(String rubro, String localidad, String barrio) {
-                  def listadoventasbuscador = Propiedad.findAll("from Propiedad as p where (p.rubro=:rubros and p.localidad=:localidades and p.barrio=:barrios)", [rubros: rubro, localidades: localidad, barrios: barrio])
-                  return listadoventasbuscador
-                  }
+      List listarVentasbuscador(String rubro, String localidad, String barrio) {
+            def listadoventasbuscador = Propiedad.findAll("from Propiedad as p where (p.rubro=:rubros and p.localidad=:localidades and p.barrio=:barrios)", [rubros: rubro, localidades: localidad, barrios: barrio])
+            return listadoventasbuscador
+            }
+
+      List listarConsultas() {
+            def listado = Consulta.findAll("from Consulta as c where c.estado=:estado", [estado: 'No Leido'])
+            return listado
+            }
+
+      void altaConsulta(Map params) {
+            def consulta = new Consulta(params)
+            consulta.setEstado("No Leido")
+            consulta.save(flush:true)
+            }
+
+      void quitarConsulta(Long id){
+            def consulta = Consulta.get(id)
+            consulta.estado = 'Leido'
+            consulta.save(flush: true)
+      }            
 
 }

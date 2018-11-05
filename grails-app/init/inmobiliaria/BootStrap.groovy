@@ -157,7 +157,7 @@ class BootStrap {
     estado:'Libre')
     prop10.save(flush:true)
 
-    //Consultas
+//Consultas
     def consulta1= new Consulta(nombre:'Fabricio',
     apellido: 'Veliz',
     telefono:'4441019',
@@ -166,7 +166,7 @@ class BootStrap {
     estado: 'No Leido')
     consulta1.save(flush:true)
 
-  //Usuarios
+//Usuarios
 
     def usuario1 = new Usuario(nombreUsuario: "Fabricio" ,password: "12345",email: "fabricio@gmail.com")
     if(!usuario1.save(flush: true)) {
@@ -230,8 +230,6 @@ class BootStrap {
         println it
       }
     }*/
-
-
 
     }
     def destroy = {

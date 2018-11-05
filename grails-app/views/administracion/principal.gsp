@@ -68,9 +68,9 @@
 
                                     <div class="btn-group" role="group" aria-label="Basic example">
 
-                                            <g:field type="text" name="rubro" placeholder="RUBRO" class="btn-group1"/><br>
-                                            <g:field type="text" name="localidad" placeholder="LOCALIDAD" class="btn-group1"/><br>
-                                            <g:field type="text" name="barrio" placeholder="BARRIO" class="btn-group1"/><br><br>
+                                            <g:field type="text" name="rubro" placeholder="Rubro" class="btn-group1"/><br>
+                                            <g:field type="text" name="localidad" placeholder="Localidad" class="btn-group1"/><br>
+                                            <g:field type="text" name="barrio" placeholder="Barrio" class="btn-group1"/><br><br>
                                             <g:submitButton  class="btn-form" name="submit" value="Buscar"/>
 
                                     </div>
@@ -200,10 +200,16 @@
                     </div>
                 </div>  -->
             </div>
-
+        </div>
+            <div class="row justify-content-center">
+                <div class="col-md-4">
+                    <div class="featured-btn-wrap">
+                        <a href="#" class="btn btn-danger">VIEW ALL</a>
+                    </div>
+                </div>
+            </div>
+    </section>
     <!--//END FEATURED PLACES -->
-    <!--============================= CATEGORIES =============================-->
-
 </body>
 
 </html>

@@ -8,7 +8,7 @@ String funcion='OPERADOR'
 
   static constraints = {
 
-  usuario (unique:true, blank :false, maxSize:30)
+  usuario(unique:true, blank :false, maxSize:30)
   contrasenia(blank : false , maxSize : 10)
 
   }
