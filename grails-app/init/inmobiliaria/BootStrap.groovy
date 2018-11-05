@@ -158,11 +158,12 @@ class BootStrap {
     prop10.save(flush:true)
 
     //Consultas
-    def consulta1= new Consulta( nombre:'Fabricio',
+    def consulta1= new Consulta(nombre:'Fabricio',
     apellido: 'Veliz',
     telefono:'4441019',
-    direccion:'Santa Rosa',
-    comentario: 'Y ELLA?')
+    email:'fa@gmail.com',
+    comentario: 'NO ME GUSTA',
+    estado: 'No Leido')
     consulta1.save(flush:true)
 
   //Usuarios
@@ -209,7 +210,26 @@ class BootStrap {
       }
     }
 
+    /*def usuario3 = new Usuario(nombreUsuario: "Alejandro" ,password: "12345",email: "alejandron@gmail.com")
+    if(!usuario3.save(flush: true)) {
+      usuario3.errors.each{
+        println it
+      }
+    }
 
+    def rol3 = new Rol(authority: "OPERADOR")
+    if(!rol3.save(flush: true)) {
+      rol3.errors.each{
+        println it
+      }
+    }
+
+    def usuarioRol3 = new UsuarioRol(usuario: usuario3, rol: rol3)
+    if(!usuarioRol3.save(flush: true)) {
+      usuarioRol3.errors.each{
+        println it
+      }
+    }*/
 
 
 

@@ -7,6 +7,10 @@ class AdministracionController {
         render(view:"principal")
      }
 
+     def volver() {
+         render(view:"administrador")
+      }
+
     def ventanaAdministrador() {
         render(view:"administrador")
      }

@@ -1,7 +1,7 @@
 <!doctype html>
 <html>
 <head>
-    <meta name="layout" content="main"/>
+    <meta name="layout" content="mainConsulta"/>
     <title>SIGAI</title>
 </head>
 <body>
@@ -54,8 +54,9 @@
             color: black !important;
         }
         #content .colset-2-its {
-            text-align: center;
-            top: -100px;
+            text-align: left;
+            top: -200px;
+            left: 50px;
         }
         #content .colset-2-its > h1 {
             margin-top: 0px;

@@ -35,7 +35,7 @@
                                 --->
                                     <li><g:link controller="administracion" action="ventas" class="nav-link">Ventas</g:link></li>
                                     <li><g:link controller="administracion" action="alquiler" class="nav-link">Alquiler</g:link></li>
-                                    <li><g:link controller="administracion" action="consulta" class="nav-link">Consultas</g:link></li>
+                                    <li><g:link controller="administracion" action="consulta" class="nav-link">Consulta</g:link></li>
 
                                     <li><a><g:link controller="login" action="login" class="btn btn-outline-light top-btn">Iniciar Sesion</g:link></a></li>
                                 </ul>
@@ -58,7 +58,7 @@
                             <div class="col-md-12">
                                 <div class="slider-content_wrap">
                                     <h1>Vive en el lugar de tus sueños</h1>
-                                    <h5>Let's uncover the best places to eat, drink, and shop nearest to you.</h5>
+                            
                                 </div>
                             </div>
                         </div>

@@ -31,7 +31,7 @@
                                 <h6>${it.nombre}${it.apellido} </h6>
                                 <p>${it.email}</p> <span>• </span>
                                 <p>${it.telefono}</p> <span> • </span>
-                                <p>COMENARIO:<span> ${it.comentario}</span></p>
+                                <p>COMENTARIO:<span> ${it.comentario}</span></p>
                                 <div class="bottom-icons">
                                     <div class="closed-now">LEIDO</div>
                                     <span class="ti-heart"></span>

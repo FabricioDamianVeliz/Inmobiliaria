@@ -7,6 +7,7 @@ class LoginController {
      return render(view: 'login')
    }
 
+
     def u = Usuario.findByEmail(params.email)
     //def roles = Usuario.getRoles()
 
