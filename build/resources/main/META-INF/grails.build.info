@@ -1,6 +1,6 @@
-#Mon, 05 Nov 2018 00:42:32 -0300
+#Mon, 05 Nov 2018 18:31:39 -0300
 
 info.app.version=0.1
-info.app.name=Inmobiliaria
+info.app.name=Inmobiliaria-master
 grails.env=development
 info.app.grailsVersion=3.3.8

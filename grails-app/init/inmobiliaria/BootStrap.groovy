@@ -210,7 +210,7 @@ class BootStrap {
       }
     }
 
-    /*def usuario3 = new Usuario(nombreUsuario: "Alejandro" ,password: "12345",email: "alejandron@gmail.com")
+    def usuario3 = new Usuario(nombreUsuario: "Alejandro" ,password: "12345",email: "alejandro@gmail.com")
     if(!usuario3.save(flush: true)) {
       usuario3.errors.each{
         println it
@@ -229,7 +229,7 @@ class BootStrap {
       usuarioRol3.errors.each{
         println it
       }
-    }*/
+    }
 
     }
     def destroy = {

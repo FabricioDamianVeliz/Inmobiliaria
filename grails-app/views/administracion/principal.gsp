@@ -58,7 +58,7 @@
                             <div class="col-md-12">
                                 <div class="slider-content_wrap">
                                     <h1>Vive en el lugar de tus sueños</h1>
-                            
+
                                 </div>
                             </div>
                         </div>
@@ -98,6 +98,9 @@
                     </div>
                 </div>
             </div>
+            <g:if test="${flash.message}">
+              <div class="message" role="status">${flash.message}</div>
+            </g:if>
             <div class="row">
                 <g:each in="${listadoOfertas?}">
 

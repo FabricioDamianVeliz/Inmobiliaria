@@ -7,15 +7,17 @@ class Consulta {
   String email
   String comentario
   String estado
+  //Propiedad propiedad
 
 
-    Consulta (String nombre, String apellido, Integer telefono, String email, String comentario) {
+    Consulta (String nombre, String apellido, Integer telefono, String email, String comentario/*,Propiedad propiedad*/) {
       this.nombre=nombre
       this.apellido=apellido
       this.telefono=telefono
       this.email=email
       this.comentario=comentario
       this.estado='No Leido'
+      //this.propiedad=propiedad
     }
 
 

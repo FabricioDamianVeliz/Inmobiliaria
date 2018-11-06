@@ -16,10 +16,10 @@ class LoginController {
           session.usuario = u
           //if(roles.authority=="ADMINISTRADOR"){
           if(session.usuario.getRoles().any{it.authority=='ADMINISTRADOR'}) {
-            redirect(controller: "administracion", action: "sesionAdministrador")
+            redirect(controller: "administracion", action: "ventanaAdministrador")
           }
           else{
-            redirect(controller: "administracion", action: "sesionOperador")
+            redirect(controller: "administracion", action: "ventanaOperador")
           }
 
 

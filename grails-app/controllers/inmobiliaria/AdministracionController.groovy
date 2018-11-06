@@ -31,14 +31,6 @@ class AdministracionController {
         render(view:"operador")
     }
 
-    def sesionAdministrador(){
-        render (view: "administrador")
-    }
-
-    def sesionOperador(){
-        render (view: "operador")
-    }
-
     def consulta(){
         [consulta: new Consulta()]
         render (view: "consulta")
@@ -55,6 +47,10 @@ class AdministracionController {
     }
 
     def ventasbuscador(){
+      if(!params.rubro && !params.localidad && !params.barrio) {
+        flash.message="Debe ingresar un rubro/localidad/barrio"
+        render(view: 'principal')
+      }
         [listadoVentasbuscador: administracionService.listarVentasbuscador(params.rubro, params.localidad, params.barrio)]
     }
 

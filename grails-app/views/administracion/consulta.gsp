@@ -86,6 +86,8 @@
 
           <g:form controller="administracion" action="guardarConsulta" method="post">
             <br><br>
+            <!--<label for="nombre">Propiedad:</label> <input type="text" id="nombre" name="nombre"/>
+            <br><br>-->
               <label for="nombre">Nombre:</label> <input type="text" id="nombre" name="nombre"/>
             <br><br>
               <label for="apellido">Apellido:</label> <input type="text" id="apellido" name="apellido"/>
