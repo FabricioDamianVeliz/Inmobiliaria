@@ -10,7 +10,12 @@ class UrlMappings {
         }
 
         "/"(view:"/administracion/principal", controller:'administracion', action:'principal')
+        "/propiedadesInfo"(resources:"apipropiedades") {
+        collection {"/lisApiPropiedadesPorRubro"(controller: "Apipropiedades", action: "lisApiPropiedadesPorRubro")
+        }
+        }
         "500"(view:'/error')
         "404"(view:'/notFound')
     }
+
 }

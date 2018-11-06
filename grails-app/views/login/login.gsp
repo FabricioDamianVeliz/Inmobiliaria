@@ -36,7 +36,7 @@
                 <div class="row">
                     <div class="col-md-12">
                         <nav class="navbar navbar-expand-lg navbar-light">
-                            <a class="navbar-brand" href="index.html">SIGAI</a>
+                            <a >SIGAI</a>
                             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="icon-menu"></span>
               </button>
@@ -56,7 +56,7 @@
                                         <a class="nav-link" href="#">Iniciar Sesion</a>
                                     </li>
                                 --->
-                                    <li> <div class="btn btn-outline-light top-btn"><g:link  controller="administracion" action="index" class="nav-link"><span class="ti-plus"></span>VOLVER</a></g:link></div></li>
+                                    <li> <div class="btn btn-outline-light top-btn"><g:link  controller="administracion" action="principal"  class="nav-link"><span class="ti-plus"></span>VOLVER</a></g:link></div></li>
                                   </ul>
                             </div>
                         </nav>

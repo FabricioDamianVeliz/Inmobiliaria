@@ -3,7 +3,7 @@ package inmobiliaria
 import grails.validation.ValidationException
 import static org.springframework.http.HttpStatus.*
 
-class PropiedadController {
+class PropiedadController  {
 
     PropiedadService propiedadService
 
