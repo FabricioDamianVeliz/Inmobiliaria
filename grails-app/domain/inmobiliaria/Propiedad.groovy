@@ -36,4 +36,8 @@ class Propiedad {
   categoria (blank: false, maxSize: 20, inList:['Casa','Departamento', 'Oficina', 'Local'])
   estado (blank: false, maxSize: 15, inList:['Vendida', 'Alquilada', 'Libre'])
 }
+
+String toString (){
+    return  "Calle:" + this.calle + ". Numero:"+ this.numero +". Tipo Propiedad:" + this.categoria +".  Tipo operacion:"+ this.rubro
+  }
 }
