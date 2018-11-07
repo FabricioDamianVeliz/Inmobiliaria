@@ -81,7 +81,7 @@
             <div class="collapse navbar-collapse " id="navbarCollapse">
               <ul class="navbar-nav mr-auto">
 
-                <li class="nav-item"><button type="button" class="btn btn-inverse navbar-btn"><g:link controller="administracion" action="index">VOLVER</g:link></button></li>
+                <li class="nav-item"><button type="button" class="btn btn-inverse navbar-btn"><g:link controller="administracion" action="principal">VOLVER</g:link></button></li>
               </ul>
 
 
