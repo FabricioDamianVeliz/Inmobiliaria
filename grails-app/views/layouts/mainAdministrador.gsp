@@ -98,6 +98,7 @@
                 <li class="nav-item"><button type="button" class="btn btn-inverse navbar-btn"><g:link controller="administracion" action="pendientes">CONSULTAS PENDIENTES </g:link></button></li>
                 <li class="nav-item"><button type="button" class="btn btn-inverse navbar-btn"><g:link controller="contrato" action="index">VENTA PROPIEDAD</g:link></button></li>
                 <li class="nav-item"><button type="button" class="btn btn-inverse navbar-btn"><g:link controller="login" action="logout">CERRAR SESION</g:link></button></li>
+                <li class="nav-item"><a href="#"><span class="glyphicon glyphicon-user"></span> Usuario:${session?.usuario?.nombreUsuario}</a>
               </ul>
 
 
