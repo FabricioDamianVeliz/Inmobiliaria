@@ -19,7 +19,7 @@ class LoginController {
             redirect(controller: "administracion", action: "ventanaAdministrador")
           }
           else{
-            redirect(controller: "administracion", action: "ventanaOperador")
+            redirect(controller: "administracion", action: "ventanaAdministrador")
           }
 
 

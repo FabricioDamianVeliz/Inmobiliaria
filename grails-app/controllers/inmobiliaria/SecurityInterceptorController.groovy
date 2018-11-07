@@ -53,6 +53,14 @@ class SecurityInterceptor {
         }
       }
 
+      if(controllerName=='vendedor' && (actionName=='edit' || actionName=='save' || actionName=='create' || actionName=='delete' )) {
+        if(!session.usuario.getRoles().any{it.authority=='ADMINISTRADOR'}) {
+            render(view: "/administracion/principal", model: [message:'No tiene permisos para la accion solicitada'])
+            return false
+        }
+      }
+
+
 
       return true
   }
