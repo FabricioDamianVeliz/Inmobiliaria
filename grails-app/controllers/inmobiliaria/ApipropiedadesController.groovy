@@ -10,7 +10,7 @@ static responseFormats = ['json','xml']
 
      def lisApiPropiedadesPorRubro (String p) {
       if (p) {
-     respond Propiedad.findAllByrubro(p)
+     respond Propiedad.findAllByRubro(p)
       } else { respond([]) } }
     def index() { }
 }
