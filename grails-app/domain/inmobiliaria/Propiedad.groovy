@@ -18,6 +18,8 @@ class Propiedad {
     String categoria
     String estado
 
+static belongsTo = [vendedor: Vendedor]
+
     static constraints = {
 
   calle(blank: false, maxSize: 100)
@@ -38,6 +40,7 @@ class Propiedad {
 }
 
 String toString (){
-    return  "Calle:" + this.calle + ". Numero:"+ this.numero +". Tipo Propiedad:" + this.categoria +".  Tipo operacion:"+ this.rubro
+    return  "Calle: " + this.calle + "- Numero: "+ this.numero +"- Tipo Propiedad: " + this.categoria +"-  Tipo operacion: "+ this.rubro
   }
+
 }

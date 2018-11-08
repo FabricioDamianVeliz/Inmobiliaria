@@ -1,4 +1,5 @@
 inmobiliaria.$ClientesServiceImplementation
+inmobiliaria.$CompradorServiceImplementation
 inmobiliaria.$ContratoServiceImplementation
 inmobiliaria.$PropiedadServiceImplementation
 inmobiliaria.$VendedorServiceImplementation

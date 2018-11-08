@@ -2,12 +2,12 @@ package inmobiliaria
 
 class Contrato {
 
-	Date fecha;
-	BigDecimal impuesto;
-	Vendedor vendedor;
-	Propiedad propiedad;
-	Clientes cliente;
-	String descripcion;
+	Date fecha
+	BigDecimal impuesto
+	Vendedor vendedor
+	Propiedad propiedad
+	Comprador comprador
+	String descripcion
 
 
     static constraints = {

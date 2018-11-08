@@ -87,6 +87,13 @@ class VendedorController {
         }
     }
 
+    def createPropiedad (Long id){
+        Propiedad propiedad = new Propiedad()
+        propiedad.vendedor=  Vendedor.get (params.id)
+         [propiedad : propiedad]
+
+    }
+
     protected void notFound() {
         request.withFormat {
             form multipartForm {

@@ -4,6 +4,43 @@ class BootStrap {
 
   def init = { servletContext ->
 
+  //Vendedores
+
+    def vendedor1= new Vendedor(nombre:'Emiliano',
+    apellido:'Mercado',
+    dni:'21458260',
+    direccion:'Villa Cubas',
+    telefono:'3834153268',
+    email:'emiliano@gmail.com')
+    vendedor1.save(flush:true)
+
+    def vendedor2= new Vendedor(nombre:'Gaston',
+    apellido:'Ontivero',
+    dni:'25614897',
+    direccion:'Barrio 920',
+    telefono:'3834029815',
+    email:'gaston@gmail.com')
+    vendedor2.save(flush:true)
+
+    def vendedor3= new Vendedor(nombre:'Rodrigo',
+    apellido:'Pereira',
+    dni:'15629848',
+    direccion:'La Tablada',
+    telefono:'3834085521',
+    email:'rodri@gmail.com')
+    vendedor3.save(flush:true)
+
+
+  //Compradores  
+    def comprador1= new Comprador(nombre:'Gabriel',
+    apellido:'Seco',
+    dni:'30649782',
+    direccion:'Barrio 240',
+    telefono:'3834009965',
+    email:'gabi@gmail.com')
+    comprador1.save(flush:true)
+
+
   //Propiedades en Alquilar
 
     def prop1= new Propiedad( calle:'Belgrano',
@@ -17,7 +54,8 @@ class BootStrap {
     categoria:'Casa',
     cantDormitorio:2,
     cantBanios:1,
-    estado:'Libre')
+    estado:'Libre',
+    vendedor: vendedor1)
     prop1.save(flush:true)
 
 
@@ -32,7 +70,8 @@ class BootStrap {
     categoria:'Local',
     cantDormitorio:3,
     cantBanios:2,
-    estado:'Libre')
+    estado:'Libre',
+    vendedor: vendedor1)
     prop2.save(flush:true)
 
 
@@ -47,7 +86,8 @@ class BootStrap {
     categoria:'Departamento',
     cantDormitorio:3,
     cantBanios:2,
-    estado:'Libre')
+    estado:'Libre',
+    vendedor: vendedor1)
     prop3.save(flush:true)
 
 
@@ -62,7 +102,8 @@ class BootStrap {
     categoria:'Oficina',
     cantDormitorio:3,
     cantBanios:2,
-    estado:'Libre')
+    estado:'Libre',
+    vendedor: vendedor1)
     prop4.save(flush:true)
 
 
@@ -77,7 +118,8 @@ class BootStrap {
     categoria:'Casa',
     cantDormitorio:2,
     cantBanios:1,
-    estado:'Libre')
+    estado:'Libre',
+    vendedor: vendedor2)
     prop5.save(flush:true)
 
 
@@ -92,7 +134,8 @@ class BootStrap {
     categoria:'Local',
     cantDormitorio:3,
     cantBanios:2,
-    estado:'Vendida')
+    estado:'Vendida',
+    vendedor: vendedor2)
     prop6.save(flush:true)
 
 
@@ -107,7 +150,8 @@ class BootStrap {
     categoria:'Departamento',
     cantDormitorio:3,
     cantBanios:2,
-    estado:'Libre')
+    estado:'Libre',
+    vendedor: vendedor2)
     prop7.save(flush:true)
 
 
@@ -122,7 +166,8 @@ class BootStrap {
     categoria:'Oficina',
     cantDormitorio:3,
     cantBanios:2,
-    estado:'Libre')
+    estado:'Libre',
+    vendedor: vendedor2)
     prop8.save(flush:true)
 
 
@@ -139,7 +184,8 @@ class BootStrap {
     categoria:'Casa',
     cantDormitorio:3,
     cantBanios:2,
-    estado:'Libre')
+    estado:'Libre',
+    vendedor: vendedor3)
     prop9.save(flush:true)
 
 
@@ -154,8 +200,25 @@ class BootStrap {
     categoria:'Casa',
     cantDormitorio:3,
     cantBanios:2,
-    estado:'Libre')
+    estado:'Libre',
+    vendedor: vendedor3)
     prop10.save(flush:true)
+
+    vendedor1.addToPropiedad(prop1)
+    vendedor1.addToPropiedad(prop2)
+    vendedor1.addToPropiedad(prop3)
+    vendedor1.addToPropiedad(prop4)
+    vendedor1.save()
+
+    vendedor2.addToPropiedad(prop5)
+    vendedor2.addToPropiedad(prop6)
+    vendedor2.addToPropiedad(prop7)
+    vendedor2.addToPropiedad(prop8)
+    vendedor2.save()
+    
+    vendedor3.addToPropiedad(prop9)
+    vendedor3.addToPropiedad(prop10)
+    vendedor3.save()
 
 //Consultas
     def consulta1= new Consulta(nombre:'Fabricio',
