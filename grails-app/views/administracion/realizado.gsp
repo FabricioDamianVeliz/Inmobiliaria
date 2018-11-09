@@ -94,13 +94,13 @@
             <div class="row justify-content-center">
                 <div class="col-md-5">
                     <div class="styled-heading">
-                        <h3>Propiedades en Venta</h3>
+                        <h3>Propiedades Vendidas o Alquiladas</h3>
                     </div>
                 </div>
             </div>
 
         <div class="row">
-            <g:each in="${listadoVentas?}">
+            <g:each in="${listadorealizado?}">
 
                 <div class="col-md-4 featured-responsive">
                     <div class="featured-place-wrap">
@@ -201,7 +201,13 @@
                 </div>
             </div>  -->
         </div>
-          
+            <div class="row justify-content-center">
+                <div class="col-md-4">
+                    <div class="featured-btn-wrap">
+                        <a href="#" class="btn btn-danger">VIEW ALL</a>
+                    </div>
+                </div>
+            </div>
     </section>
     <!--//END FEATURED PLACES -->
 </body>

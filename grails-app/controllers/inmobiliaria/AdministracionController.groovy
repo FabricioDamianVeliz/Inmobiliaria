@@ -63,5 +63,18 @@ class AdministracionController {
         redirect(action:"pendientes")
     }
 
+    def estadoPropiedad(){
+        administracionService.quitarPropiedad(new Long(params.id))
+        render (view:"administrador")
+    }
+
+    def realizado(){
+        [listadorealizado: administracionService.listarrealizado()]
+    }
+
+
+    def todconsul(){
+        [listadotodasconsultas: administracionService.listartodasconsultas()]
+    }
 
 }

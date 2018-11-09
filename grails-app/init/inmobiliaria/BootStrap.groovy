@@ -23,7 +23,7 @@ class BootStrap {
     vendedor2.save(flush:true)
 
     def vendedor3= new Vendedor(nombre:'Rodrigo',
-    apellido:'Pereira',
+    apellido:'Garribia',
     dni:'15629848',
     direccion:'La Tablada',
     telefono:'3834085521',
@@ -54,7 +54,7 @@ class BootStrap {
     categoria:'Casa',
     cantDormitorio:2,
     cantBanios:1,
-    estado:'Libre',
+    estado:'Disponible',
     vendedor: vendedor1)
     prop1.save(flush:true)
 
@@ -70,7 +70,7 @@ class BootStrap {
     categoria:'Local',
     cantDormitorio:3,
     cantBanios:2,
-    estado:'Libre',
+    estado:'Disponible',
     vendedor: vendedor1)
     prop2.save(flush:true)
 
@@ -86,7 +86,7 @@ class BootStrap {
     categoria:'Departamento',
     cantDormitorio:3,
     cantBanios:2,
-    estado:'Libre',
+    estado:'Disponible',
     vendedor: vendedor1)
     prop3.save(flush:true)
 
@@ -102,7 +102,7 @@ class BootStrap {
     categoria:'Oficina',
     cantDormitorio:3,
     cantBanios:2,
-    estado:'Libre',
+    estado:'Disponible',
     vendedor: vendedor1)
     prop4.save(flush:true)
 
@@ -118,7 +118,7 @@ class BootStrap {
     categoria:'Casa',
     cantDormitorio:2,
     cantBanios:1,
-    estado:'Libre',
+    estado:'Disponible',
     vendedor: vendedor2)
     prop5.save(flush:true)
 
@@ -134,7 +134,7 @@ class BootStrap {
     categoria:'Local',
     cantDormitorio:3,
     cantBanios:2,
-    estado:'Vendida',
+    estado:'No Disponible',
     vendedor: vendedor2)
     prop6.save(flush:true)
 
@@ -150,7 +150,7 @@ class BootStrap {
     categoria:'Departamento',
     cantDormitorio:3,
     cantBanios:2,
-    estado:'Libre',
+    estado:'Disponible',
     vendedor: vendedor2)
     prop7.save(flush:true)
 
@@ -166,7 +166,7 @@ class BootStrap {
     categoria:'Oficina',
     cantDormitorio:3,
     cantBanios:2,
-    estado:'Libre',
+    estado:'Disponible',
     vendedor: vendedor2)
     prop8.save(flush:true)
 
@@ -184,7 +184,7 @@ class BootStrap {
     categoria:'Casa',
     cantDormitorio:3,
     cantBanios:2,
-    estado:'Libre',
+    estado:'Disponible',
     vendedor: vendedor3)
     prop9.save(flush:true)
 
@@ -200,7 +200,7 @@ class BootStrap {
     categoria:'Casa',
     cantDormitorio:3,
     cantBanios:2,
-    estado:'Libre',
+    estado:'Disponible',
     vendedor: vendedor3)
     prop10.save(flush:true)
 
@@ -225,7 +225,7 @@ class BootStrap {
     apellido: 'Veliz',
     telefono:'4441019',
     email:'fa@gmail.com',
-    comentario: 'NO ME GUSTA',
+    comentario: 'No me gusta',
     estado: 'No Leido')
     consulta1.save(flush:true)
 

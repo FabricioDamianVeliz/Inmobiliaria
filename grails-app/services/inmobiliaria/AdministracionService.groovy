@@ -6,23 +6,23 @@ import grails.gorm.transactions.Transactional
 class AdministracionService {
 
       List listarVentas() {
-            def ofertasVentas = Propiedad.findAll("from Propiedad as p where p.rubro=:venta", [venta: 'Venta'])
+            def ofertasVentas = Propiedad.findAll("from Propiedad as p where p.rubro=:venta and p.estado=:estado", [venta: 'Venta', estado: 'Disponible'])
             return ofertasVentas
             }
 
       List listarAlquiler() {
-            def ofertasAlquiler = Propiedad.findAll("from Propiedad as p where p.rubro=:alquiler", [alquiler: 'Alquiler'])
+            def ofertasAlquiler = Propiedad.findAll("from Propiedad as p where p.rubro=:alquiler and p.estado=:estado", [alquiler: 'Alquiler', estado: 'Disponible'])
             return ofertasAlquiler
             }
 
       List listarOfertas() {
-            def ofertas = Propiedad.findAll("from Propiedad as p where (p.precio<=:precioVenta and p.rubro=:venta and p.estado=:estado) or (p.precio<=:precioAlquiler and p.rubro=:alquiler and p.estado=:estado) ", [precioVenta: 1000000.00, venta: 'Venta', estado: 'Libre', precioAlquiler: 3000.00, alquiler: 'Alquiler'])
+            def ofertas = Propiedad.findAll("from Propiedad as p where (p.precio<=:precioVenta and p.rubro=:venta and p.estado=:estado) or (p.precio<=:precioAlquiler and p.rubro=:alquiler and p.estado=:estado) ", [precioVenta: 1000000.00, venta: 'Venta', estado: 'Disponible', precioAlquiler: 3000.00, alquiler: 'Alquiler'])
             return ofertas
             }
 
 
       List listarVentasbuscador(String rubro, String localidad, String barrio) {
-            def listadoventasbuscador = Propiedad.findAll("from Propiedad as p where (p.rubro=:rubros and p.localidad=:localidades and p.barrio=:barrios)", [rubros: rubro, localidades: localidad, barrios: barrio])
+            def listadoventasbuscador = Propiedad.findAll("from Propiedad as p where (p.rubro=:rubros and p.localidad=:localidades and p.barrio=:barrios and p.estado=:libre)", [rubros: rubro, localidades: localidad, barrios: barrio, libre:'Disponible'])
             return listadoventasbuscador
             }
 
@@ -41,6 +41,24 @@ class AdministracionService {
             def consulta = Consulta.get(id)
             consulta.estado = 'Leido'
             consulta.save(flush: true)
-      }            
+      }
+
+      void quitarPropiedad(Long id){
+            def propiedad = Propiedad.get(id)
+            propiedad.estado = 'No Disponible'
+            propiedad.save(flush: true)
+            }
+
+            List listarrealizado() {
+                  def realizado = Propiedad.findAll("from Propiedad as p where p.estado=:estado", [estado: 'No Disponible'])
+                  return realizado
+              }
+
+
+          List listartodasconsultas() {
+              def listado = Consulta.findAll("from Consulta as c where c.estado=:estado1 or c.estado=:estado2", [estado1: 'Leido', estado2: 'No Leido'])
+                return listado
+                    }
+
 
 }

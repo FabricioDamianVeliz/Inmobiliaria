@@ -13,6 +13,6 @@ interface ContratoService {
 
     void delete(Serializable id)
 
-    Contrato save(Contrato contrato)
+    Contrato save(Contrato contrato)  
 
 }

@@ -10,17 +10,17 @@
             <div class="row justify-content-center">
                 <div class="col-md-5">
                     <div class="styled-heading">
-                        <h3>Nuevas Consultas</h3>
+                        <h3>Todas las Consultas</h3>
                     </div>
                 </div>
             </div>
         </div>
 
         <div class="row">
-            <g:each in="${listadoConsultas?}">
+            <g:each in="${listadotodasconsultas?}">
                 <div class="col-md-4 featured-responsive">
                     <div class="featured-place-wrap">
-                        <a><g:link controller="administracion" action="estadoConsulta" id="${it.id}">
+
                             <asset:image src="images/featured1.jpg" class="img-fluid" alt="#"/>
                             <span class="featured-rating-orange"><div class="closed-now">${it.estado}</div></span>
                             <div class="featured-title-box">
@@ -29,11 +29,12 @@
                                 <p>Tel: ${it.telefono}</p>
                                 <p>Mensaje: ${it.comentario}</p>
                                 <div class="bottom-icons">
+
                                     <span class="ti-heart"></span>
                                     <span class="ti-bookmark"></span>
                                 </div>
                             </div>
-                        </g:link></a>
+                        
                     </div>
                 </div>
             </g:each>
