@@ -38,8 +38,8 @@ class AdministracionController {
 
     def guardarConsulta(){
         administracionService.altaConsulta(params)
-        render (view: "/administracion/principal")
-        //redirect(controller:"administracion",action:"pendiente")
+        //render (view: "/administracion/principal")
+        redirect(controller:"administracion",action:"principal")
     }
 
     def pendientes(){
