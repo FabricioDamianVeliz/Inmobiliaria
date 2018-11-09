@@ -67,6 +67,7 @@ class AdministracionController {
         administracionService.quitarPropiedad(new Long(params.id))
         render (view:"administrador")
     }
+<<<<<<< HEAD
 
     def realizado(){
         [listadorealizado: administracionService.listarrealizado()]
@@ -76,5 +77,7 @@ class AdministracionController {
     def todconsul(){
         [listadotodasconsultas: administracionService.listartodasconsultas()]
     }
+=======
+>>>>>>> 24e12028963efb1b0f3a964e49d0b327040f43c6
 
 }

@@ -47,6 +47,7 @@ class AdministracionService {
             def propiedad = Propiedad.get(id)
             propiedad.estado = 'No Disponible'
             propiedad.save(flush: true)
+<<<<<<< HEAD
             }
 
             List listarrealizado() {
@@ -60,5 +61,8 @@ class AdministracionService {
                 return listado
                     }
 
+=======
+            }          
+>>>>>>> 24e12028963efb1b0f3a964e49d0b327040f43c6
 
 }

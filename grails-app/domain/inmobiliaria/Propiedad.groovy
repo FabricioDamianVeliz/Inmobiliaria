@@ -40,6 +40,11 @@ static belongsTo = [vendedor: Vendedor]
 }
 
 String toString (){
+<<<<<<< HEAD
     return  "Calle: " + this.calle + "- Numero: "+ this.numero +"- Tipo Propiedad: " + this.categoria +"-  Tipo operacion: "+ this.rubro   }
+=======
+    return  "Calle: " + this.calle + "- Numero: "+ this.numero +"- Tipo Propiedad: " + this.categoria +"-  Tipo operacion: "+ this.rubro +"- Estado: " + this.estado
+  }
+>>>>>>> 24e12028963efb1b0f3a964e49d0b327040f43c6
 
 }

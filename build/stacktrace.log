@@ -32791,6 +32791,7 @@ Caused by: groovy.lang.MissingPropertyException: No such property: contratoServi
 	at grails.artefact.gsp.TagLibraryInvoker$Trait$Helper.propertyMissing(TagLibraryInvoker.groovy:121)
 	at inmobiliaria.AdministracionController.estadoPropiedad(AdministracionController.groovy:67)
 	... 14 common frames omitted
+<<<<<<< HEAD
 ERROR StackTrace - Full Stack Trace:
 java.lang.reflect.InvocationTargetException: null
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
@@ -34153,3 +34154,5 @@ Caused by: groovy.lang.MissingPropertyException: No such property: realizado for
 	at grails.gorm.transactions.GrailsTransactionTemplate.execute(GrailsTransactionTemplate.groovy:91)
 	at inmobiliaria.AdministracionController.realizado(AdministracionController.groovy:72)
 	... 14 common frames omitted
+=======
+>>>>>>> 24e12028963efb1b0f3a964e49d0b327040f43c6
