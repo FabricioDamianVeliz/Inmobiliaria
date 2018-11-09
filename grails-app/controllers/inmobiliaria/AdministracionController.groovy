@@ -63,5 +63,9 @@ class AdministracionController {
         redirect(action:"pendientes")
     }
 
+    def estadoPropiedad(){
+        administracionService.quitarPropiedad(new Long(params.id))
+        render (view:"administrador")
+    }
 
 }

@@ -36,11 +36,11 @@ static belongsTo = [vendedor: Vendedor]
   piso(nullable:true, blank:true, max:30)
   nDepartamento(nullable:true, blank:true, max:200 )
   categoria (blank: false, maxSize: 20, inList:['Casa','Departamento', 'Oficina', 'Local'])
-  estado (blank: false, maxSize: 15, inList:['Vendida', 'Alquilada', 'Libre'])
+  estado (blank: false, maxSize: 15, inList:['Disponible', 'No Disponible'])
 }
 
 String toString (){
-    return  "Calle: " + this.calle + "- Numero: "+ this.numero +"- Tipo Propiedad: " + this.categoria +"-  Tipo operacion: "+ this.rubro
+    return  "Calle: " + this.calle + "- Numero: "+ this.numero +"- Tipo Propiedad: " + this.categoria +"-  Tipo operacion: "+ this.rubro +"- Estado: " + this.estado
   }
 
 }
