@@ -107,7 +107,8 @@
                     <div class="col-md-4 featured-responsive">
                         <div class="featured-place-wrap">
                             <a><g:link controller="administracion" action="consulta">
-                                <asset:image src="images/featured1.jpg" class="img-fluid" alt="#"/>
+                              <!--<asset:image src="images/featured1.jpg" class="img-fluid" alt="#"/>-->
+                              <img class="card-img-top" src=${createLink(controller:"propiedad", action:"verImagen", id:"${it.id}")} style="height: 225px; width: 100%; display: block;" data-holder-rendered="true">
                                 <span class="featured-rating-orange">9.5</span>
                                 <div class="featured-title-box">
                                     <h6>${it.rubro}</h6>
@@ -204,7 +205,7 @@
                 </div>  -->
             </div>
         </div>
-            
+
     </section>
     <!--//END FEATURED PLACES -->
 </body>

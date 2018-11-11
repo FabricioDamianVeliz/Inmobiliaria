@@ -17,6 +17,7 @@ class Propiedad {
     Integer nDepartamento
     String categoria
     String estado
+    byte[] imagen
 
 static belongsTo = [vendedor: Vendedor]
 
@@ -37,9 +38,14 @@ static belongsTo = [vendedor: Vendedor]
   nDepartamento(nullable:true, blank:true, max:200 )
   categoria (blank: false, maxSize: 20, inList:['Casa','Departamento', 'Oficina', 'Local'])
   estado (blank: false, maxSize: 15, inList:['Disponible', 'No Disponible'])
+  imagen(nullable: true, maxSize: 1024 * 1024 * 2)
 }
 
 String toString (){
-    return  "Calle: " + this.calle + "- Numero: "+ this.numero +"- Tipo Propiedad: " + this.categoria +"-  Tipo operacion: "+ this.rubro   }
+    return  "Calle: " + this.calle + "- Numero: "+ this.numero +"- Tipo Propiedad: " + this.categoria +"-  Tipo operacion: "+ this.rubro +"-  Estado: "+ this.estado  }
+
+    static mapping = {
+        imagen column: 'featured_image_bytes', sqlType: 'bytea'
+    }
 
 }

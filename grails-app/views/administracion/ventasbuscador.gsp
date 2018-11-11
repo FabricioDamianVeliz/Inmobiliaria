@@ -59,7 +59,7 @@
                             <div class="col-md-12">
                                 <div class="slider-content_wrap">
                                     <h1>Vive en el lugar de tus sueños</h1>
-                                    <h5>Let's uncover the best places to eat, drink, and shop nearest to you.</h5>
+
                                 </div>
                             </div>
                         </div>
@@ -106,7 +106,8 @@
                 <div class="col-md-4 featured-responsive">
                     <div class="featured-place-wrap">
                         <a><g:link controller="administracion" action="consulta">
-                            <asset:image src="images/featured1.jpg" class="img-fluid" alt="#"/>
+                          <!--<asset:image src="images/featured1.jpg" class="img-fluid" alt="#"/>-->
+                          <img class="card-img-top" src=${createLink(controller:"propiedad", action:"verImagen", id:"${it.id}")} style="height: 225px; width: 100%; display: block;" data-holder-rendered="true">
                             <span class="featured-rating-orange">9.5</span>
                             <div class="featured-title-box">
                                 <h6>${it.rubro}</h6>

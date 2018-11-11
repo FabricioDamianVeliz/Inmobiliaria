@@ -31,7 +31,7 @@ class BootStrap {
     vendedor3.save(flush:true)
 
 
-  //Compradores  
+  //Compradores
     def comprador1= new Comprador(nombre:'Gabriel',
     apellido:'Seco',
     dni:'30649782',
@@ -41,7 +41,7 @@ class BootStrap {
     comprador1.save(flush:true)
 
 
-  //Propiedades en Alquilar
+  /*//Propiedades en Venta
 
     def prop1= new Propiedad( calle:'Belgrano',
     numero: 125,
@@ -171,7 +171,7 @@ class BootStrap {
     prop8.save(flush:true)
 
 
-//Propiedades en Alquilar
+    //Propiedades en Alquiler
 
     def prop9= new Propiedad( calle:'Salta',
     numero: 15,
@@ -215,10 +215,10 @@ class BootStrap {
     vendedor2.addToPropiedad(prop7)
     vendedor2.addToPropiedad(prop8)
     vendedor2.save()
-    
+
     vendedor3.addToPropiedad(prop9)
     vendedor3.addToPropiedad(prop10)
-    vendedor3.save()
+    vendedor3.save()*/
 
 //Consultas
     def consulta1= new Consulta(nombre:'Fabricio',

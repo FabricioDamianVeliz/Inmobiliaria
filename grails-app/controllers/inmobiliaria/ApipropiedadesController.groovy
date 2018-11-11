@@ -12,5 +12,7 @@ static responseFormats = ['json','xml']
       if (p) {
      respond Propiedad.findAllByRubro(p)
       } else { respond([]) } }
+
+
     def index() { }
 }

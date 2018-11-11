@@ -4,9 +4,11 @@
         <meta name="layout" content="volver" />
         <g:set var="entityName" value="${message(code: 'propiedad.label', default: 'Propiedad')}" />
         <title><g:message code="default.edit.label" args="[entityName]" /></title>
+        <link rel="stylesheet" href="${resource(dir:'stylesheet', file:'portada.css')}">
     </head>
     <body>
-        <a href="#edit-propiedad" class="skip" tabindex="-1"><g:message code="default.link.skip.label" default="Skip to content&hellip;"/></a>
+
+         <a href="#edit-propiedad" class="skip" tabindex="-1"><g:message code="default.link.skip.label" default="Skip to content&hellip;"/></a>
         <div class="nav" role="navigation">
             <ul>
                 <li><a class="home" href="${createLink(uri: '/')}"><g:message code="default.home.label"/></a></li>

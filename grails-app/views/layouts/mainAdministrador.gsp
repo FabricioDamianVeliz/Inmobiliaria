@@ -30,6 +30,7 @@
 
         li{
             padding-right: 20px;
+            box-sizing: border-box;
         }
 
         .footer {
@@ -39,6 +40,10 @@
 
         .navbar-nav{
             list-style:none;
+        }
+
+        .navbar navbar-default navbar-inverse{
+          height: 400px;
         }
 
     </style>
@@ -85,7 +90,8 @@
         <div class="container">
             <div class="navbar-header">
               <a class="navbar-brand" href="/#" style="padding-right:150px">
-                      <asset:image src="logo.ico" alt="Logo" id="Logo" title="Inicio"/>
+                    <asset:image src="logo.ico" alt="Logo" id="Logo" title="Inicio"/>
+                    
                 </a>
             </div>
 
@@ -99,6 +105,7 @@
                 <li class="nav-item"><button type="button" class="btn btn-inverse navbar-btn"><g:link controller="contrato" action="index">VENTA PROPIEDAD</g:link></button></li>
                 <li class="nav-item"><button type="button" class="btn btn-inverse navbar-btn"><g:link controller="administracion" action="realizado">PROPIEDADES VENDIDAS/ALQUILADAS</g:link></button></li>
                 <li class="nav-item"><button type="button" class="btn btn-inverse navbar-btn"><g:link controller="administracion" action="todconsul">CONSULTAS REALIZADAS</g:link></button></li>
+                <li class="nav-item"><button type="button" class="btn btn-inverse navbar-btn"><g:link controller="login" action="logout">CERRAR SESION</g:link></button></li>
                 <li class="nav-item"><a href="#"><span class="glyphicon glyphicon-user"></span> Usuario:${session?.usuario?.nombreUsuario}</a></li>
               </ul>
 

@@ -31,6 +31,8 @@ class AdministracionController {
         render(view:"operador")
     }
 
+  
+
     def consulta(){
         [consulta: new Consulta()]
         render (view: "consulta")
@@ -38,8 +40,8 @@ class AdministracionController {
 
     def guardarConsulta(){
         administracionService.altaConsulta(params)
-        //render (view: "/administracion/principal")
-        redirect(controller:"administracion",action:"principal")
+        render (view: "/administracion/principal")
+        //redirect(controller:"administracion",action:"principal")
     }
 
     def pendientes(){
